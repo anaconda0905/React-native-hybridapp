@@ -1,0 +1,112 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.felixpro"
+4    android:versionCode="9"
+5    android:versionName="1.0.5" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:4:5-67
+11-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+12-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:5:5-77
+12-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:5:22-75
+13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Include required permissions for Google Maps API to run. -->
+13-->[:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-81
+13-->[:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-78
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:23:5-79
+14-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:23:22-76
+15
+16    <uses-feature
+16-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:26:5-28:35
+17        android:glEsVersion="0x00020000"
+17-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:27:9-41
+18        android:required="true" />
+18-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:28:9-32
+19
+20    <application
+20-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:7:5-28:19
+21        android:name="com.felixpro.MainApplication"
+21-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:8:7-38
+22        android:allowBackup="false"
+22-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:11:7-34
+23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+23-->[androidx.core:core:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\57692e4753601536b7ad4be218820432\core-1.1.0\AndroidManifest.xml:24:18-86
+24        android:debuggable="true"
+25        android:icon="@mipmap/ic_launcher"
+25-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:10:7-41
+26        android:label="@string/app_name"
+26-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:9:7-39
+27        android:theme="@style/AppTheme"
+27-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:13:7-38
+28        android:usesCleartextTraffic="true" >
+28-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:12:7-42
+29        <meta-data
+29-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:14:7-16:64
+30            android:name="com.google.android.geo.API_KEY"
+30-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:15:7-52
+31            android:value="AIzaSyDvaS7W8iRIZTGJ6v5yePMWF4B2sCEVWqg" />
+31-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:16:7-62
+32
+33        <activity
+33-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:17:7-26:18
+34            android:name="com.felixpro.MainActivity"
+34-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:18:9-37
+35            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+35-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:20:9-79
+36            android:label="@string/app_name"
+36-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:19:9-41
+37            android:windowSoftInputMode="adjustResize" >
+37-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:21:9-51
+38            <intent-filter>
+38-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:22:9-25:25
+39                <action android:name="android.intent.action.MAIN" />
+39-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:23:13-65
+39-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:23:21-62
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:24:13-73
+41-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:24:23-70
+42            </intent-filter>
+43        </activity>
+44        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+44-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:27:7-84
+44-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:27:17-81
+45
+46        <meta-data
+46-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:11:9-13:43
+47            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
+47-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:12:13-84
+48            android:value="GlideModule" /> <!-- Needs to be explicitly declared on P+ -->
+48-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:13:13-40
+49        <uses-library
+49-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:33:9-35:40
+50            android:name="org.apache.http.legacy"
+50-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:34:13-50
+51            android:required="false" />
+51-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:35:13-37
+52
+53        <activity
+53-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:23:9-26:75
+54            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+54-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:24:13-79
+55            android:exported="false"
+55-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:25:13-37
+56            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+56-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:26:13-72
+57
+58        <meta-data
+58-->[com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:23:9-25:69
+59            android:name="com.google.android.gms.version"
+59-->[com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:24:13-58
+60            android:value="@integer/google_play_services_version" />
+60-->[com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:25:13-66
+61    </application>
+62
+63</manifest>

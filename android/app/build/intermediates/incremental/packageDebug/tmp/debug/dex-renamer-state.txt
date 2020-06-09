@@ -1,0 +1,4 @@
+#Mon Jun 08 04:26:28 EET 2020
+base.0=D\:\\_Winner\\2020.6\\workana-hybridapp-qr\\source\\android\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
