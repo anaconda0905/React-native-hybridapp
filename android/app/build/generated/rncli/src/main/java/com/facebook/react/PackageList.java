@@ -16,10 +16,10 @@ import com.felixpro.R;
 
 // @react-native-community/async-storage
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
-// @react-native-community/viewpager
-import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 // @react-native-community/masked-view
 import org.reactnative.maskedview.RNCMaskedViewPackage;
+// @react-native-community/viewpager
+import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 // react-native-fast-image
 import com.dylanvann.fastimage.FastImageViewPackage;
 // react-native-gesture-handler
@@ -84,8 +84,8 @@ public class PackageList {
     return new ArrayList<>(Arrays.<ReactPackage>asList(
       new MainReactPackage(mConfig),
       new AsyncStoragePackage(),
-      new RNCViewPagerPackage(),
       new RNCMaskedViewPackage(),
+      new RNCViewPagerPackage(),
       new FastImageViewPackage(),
       new RNGestureHandlerPackage(),
       new MapsPackage(),

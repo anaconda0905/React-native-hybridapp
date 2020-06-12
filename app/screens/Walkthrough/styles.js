@@ -13,6 +13,12 @@ export default StyleSheet.create({
   contentPage: {
     bottom: 0
   },
+  contentActionTop: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 5
+  },
+
   contentActionBottom: {
     flexDirection: "row",
     justifyContent: "space-between",
@@ -23,6 +29,10 @@ export default StyleSheet.create({
     height: Utils.scaleWithPixel(200),
     borderRadius: Utils.scaleWithPixel(200) / 2
   },
+  userplus:{
+    alignItems: "flex-end", 
+    justifyContent: "flex-end",
+  },
   slide: {
     alignItems: "center",
     justifyContent: "center",
@@ -30,5 +40,6 @@ export default StyleSheet.create({
   },
   textSlide: {
     marginTop: 30
-  }
+  },
+  
 });
