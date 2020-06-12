@@ -4,9 +4,7 @@ const LanguageData = [
     language: "English",
     checked: true
   },
-  { id: "2", language: "Vietnames" },
-  { id: "3", language: "Japanes" },
-  { id: "4", language: "Korean" }
+  { id: "2", language: "Arabic" },
 ];
 
 export { LanguageData };

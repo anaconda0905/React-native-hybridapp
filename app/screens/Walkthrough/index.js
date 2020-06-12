@@ -77,7 +77,9 @@ class Walkthrough extends Component {
           }
         >
           <View style={styles.contentActionTop}>
-              <TouchableOpacity onPress={() => this.authentication()}>
+              <TouchableOpacity onPress={() => {
+                navigation.navigate("ChangeLanguage");
+              }}>
                 <Text body1 primaryColor>
                   Eng/Arabic
                 </Text>
