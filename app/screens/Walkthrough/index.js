@@ -132,7 +132,7 @@ class Walkthrough extends Component {
               style={BaseStyle.textInput}
               onChangeText={text => this.setState({ inputext: text })}
               autoCorrect={false}
-              placeholder="Result"
+              placeholder=""
               placeholderTextColor={BaseColor.grayColor}
               value={this.state.country}
               selectionColor={BaseColor.primaryColor}

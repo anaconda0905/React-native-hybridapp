@@ -15,5 +15,12 @@ export default StyleSheet.create({
     marginTop: 10,
     padding: 10,
     width: "100%"
+  },
+  profileItem: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    width: "100%",
+    alignItems: "center",
+    paddingVertical: 20,
   }
 });

@@ -39,6 +39,7 @@ target 'FelixPro' do
   pod 'GoogleMaps'
   pod 'Google-Maps-iOS-Utils'
   use_native_modules!
+
 end
 
 

@@ -3,6 +3,6 @@
  */
 export const BaseSetting = {
   name: "FelixPro",
-  displayName: "FelixPro",
+  displayName: "Status",
   appVersion: "1.0.5"
 };

@@ -5,11 +5,12 @@ INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:1:1-30:12
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:1:1-30:12
 MERGED from [hermes-debug.aar] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\db04403f658a4a99e940d02e0793de07\hermes-debug\AndroidManifest.xml:2:1-7:12
-MERGED from [:react-native-fast-image] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-fast-image\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-community_async-storage] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\async-storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-community_viewpager] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\viewpager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_masked-view] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-community_viewpager] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\viewpager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-fast-image] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-fast-image\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-gesture-handler] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-reanimated] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-safe-area-context\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
@@ -20,6 +21,14 @@ MERGED from [:rn-range-slider] D:\_Winner\2020.6\workana-hybridapp-qr\source\nod
 MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\059dc7e4aec50edc1c33e909605891f0\jetified-react-native-0.61.5\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\cd621d24202984cf4f8f3c0450afdd9a\material-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\ff5579b0fd704d100dd064ce62c44ed8\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\b5b68cacfa1a405d1682f9b85477c768\fresco-2.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6002ba33ad65a5e043d86558d13577ff\imagepipeline-okhttp3-2.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38302d7fc574c8bc0e897747787d9fc3\drawee-2.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f55ef29ce622ce087350f8ac5cdf148b\nativeimagefilters-2.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\577df161de711631e9037db07dfbd90f\imagepipeline-2.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a0672568aae8e396ec3846e075b00a22\nativeimagetranscoder-2.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5bfb024382b310e20a5a10cdee1f597\imagepipeline-base-2.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:2:1-16:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a690766d0e0a3d8813642d48187bdf70\jetified-glide-4.9.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\de1e2d2023c0f559a65dcbfe446d880a\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -62,14 +71,6 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\HOME\.gradle\caches
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\8d42aaff3d546c77495adf868d86025c\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\7f2298edcc0be2dbea485080fe7ca170\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66716d543b7cae4ae42f1a71fa52c15c\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\b5b68cacfa1a405d1682f9b85477c768\fresco-2.0.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6002ba33ad65a5e043d86558d13577ff\imagepipeline-okhttp3-2.0.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38302d7fc574c8bc0e897747787d9fc3\drawee-2.0.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f55ef29ce622ce087350f8ac5cdf148b\nativeimagefilters-2.0.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\577df161de711631e9037db07dfbd90f\imagepipeline-2.0.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a0672568aae8e396ec3846e075b00a22\nativeimagetranscoder-2.0.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5bfb024382b310e20a5a10cdee1f597\imagepipeline-base-2.0.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d4b4ced7e3983f71576cfe6ccb58a39b\jetified-fbcore-2.0.0\AndroidManifest.xml:2:1-9:12
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:1:1-30:12
@@ -109,6 +110,8 @@ MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\cache
 MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\059dc7e4aec50edc1c33e909605891f0\jetified-react-native-0.61.5\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\cd621d24202984cf4f8f3c0450afdd9a\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\cd621d24202984cf4f8f3c0450afdd9a\material-1.1.0\AndroidManifest.xml:22:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:11:5-20
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:10:5-14:19
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:10:5-14:19
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a690766d0e0a3d8813642d48187bdf70\jetified-glide-4.9.0\AndroidManifest.xml:10:5-20
@@ -127,8 +130,6 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\c
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\e1aa3519e64d9211730cfdadef2b1717\jetified-gifdecoder-4.9.0\AndroidManifest.xml:9:5-20
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6694cd58f7b0210e11a489b1bbbdd6d4\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6694cd58f7b0210e11a489b1bbbdd6d4\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
-MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:11:5-20
 MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:7:5-11:19
 MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:7:5-11:19
 	android:appComponentFactory
@@ -181,16 +182,18 @@ INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml
 MERGED from [hermes-debug.aar] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\db04403f658a4a99e940d02e0793de07\hermes-debug\AndroidManifest.xml:5:5-44
 MERGED from [hermes-debug.aar] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\db04403f658a4a99e940d02e0793de07\hermes-debug\AndroidManifest.xml:5:5-44
-MERGED from [:react-native-fast-image] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-fast-image\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-fast-image] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-fast-image\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-community_async-storage] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\async-storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_async-storage] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\async-storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_viewpager] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\viewpager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-community_viewpager] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\viewpager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_viewpager] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\viewpager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-community_viewpager] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\viewpager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-fast-image] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-fast-image\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-fast-image] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-fast-image\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-reanimated] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
@@ -211,6 +214,22 @@ MERGED from [com.google.android.material:material:1.1.0] C:\Users\HOME\.gradle\c
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\cd621d24202984cf4f8f3c0450afdd9a\material-1.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\ff5579b0fd704d100dd064ce62c44ed8\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\ff5579b0fd704d100dd064ce62c44ed8\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\b5b68cacfa1a405d1682f9b85477c768\fresco-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\b5b68cacfa1a405d1682f9b85477c768\fresco-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6002ba33ad65a5e043d86558d13577ff\imagepipeline-okhttp3-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6002ba33ad65a5e043d86558d13577ff\imagepipeline-okhttp3-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38302d7fc574c8bc0e897747787d9fc3\drawee-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38302d7fc574c8bc0e897747787d9fc3\drawee-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f55ef29ce622ce087350f8ac5cdf148b\nativeimagefilters-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f55ef29ce622ce087350f8ac5cdf148b\nativeimagefilters-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\577df161de711631e9037db07dfbd90f\imagepipeline-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\577df161de711631e9037db07dfbd90f\imagepipeline-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a0672568aae8e396ec3846e075b00a22\nativeimagetranscoder-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a0672568aae8e396ec3846e075b00a22\nativeimagetranscoder-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5bfb024382b310e20a5a10cdee1f597\imagepipeline-base-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5bfb024382b310e20a5a10cdee1f597\imagepipeline-base-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a690766d0e0a3d8813642d48187bdf70\jetified-glide-4.9.0\AndroidManifest.xml:6:5-8:41
@@ -295,22 +314,6 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\7f2298edcc0be2dbea485080fe7ca170\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66716d543b7cae4ae42f1a71fa52c15c\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66716d543b7cae4ae42f1a71fa52c15c\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\b5b68cacfa1a405d1682f9b85477c768\fresco-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\b5b68cacfa1a405d1682f9b85477c768\fresco-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6002ba33ad65a5e043d86558d13577ff\imagepipeline-okhttp3-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6002ba33ad65a5e043d86558d13577ff\imagepipeline-okhttp3-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38302d7fc574c8bc0e897747787d9fc3\drawee-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38302d7fc574c8bc0e897747787d9fc3\drawee-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f55ef29ce622ce087350f8ac5cdf148b\nativeimagefilters-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f55ef29ce622ce087350f8ac5cdf148b\nativeimagefilters-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\577df161de711631e9037db07dfbd90f\imagepipeline-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\577df161de711631e9037db07dfbd90f\imagepipeline-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a0672568aae8e396ec3846e075b00a22\nativeimagetranscoder-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a0672568aae8e396ec3846e075b00a22\nativeimagetranscoder-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5bfb024382b310e20a5a10cdee1f597\imagepipeline-base-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5bfb024382b310e20a5a10cdee1f597\imagepipeline-base-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:5:5-43
 MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:5:5-43
 MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d4b4ced7e3983f71576cfe6ccb58a39b\jetified-fbcore-2.0.0\AndroidManifest.xml:5:5-7:41

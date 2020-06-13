@@ -1,36 +1,53 @@
 import React, { Component } from "react";
-import { View, ScrollView, TextInput } from "react-native";
+import { View, ScrollView, TextInput, Switch } from "react-native";
 import { BaseStyle, BaseColor } from "@config";
-import { Header, SafeAreaView, Icon, Button } from "@components";
 import styles from "./styles";
-
+import {
+  Header,
+  SafeAreaView,
+  Icon,
+  Text,
+  Button,
+  ProfileDetail,
+  ProfilePerformance
+} from "@components";
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
+      reminders: false,
+      first_name: "",
+      last_name: "",
+      mobile_number: "",
+      snapchat: "",
       email: "",
-      address: "",
+      password: "",
       loading: false,
       success: {
-        name: true,
+        first_name: true,
+        last_name: true,
+        mobile_number: true,
+        snapchat: true,
         email: true,
-        address: true
+        password: true
       }
     };
   }
 
   onSignUp() {
     const { navigation } = this.props;
-    let { name, email, address, success } = this.state;
+    let { first_name, last_name, mobile_number, snapchat, email, password, success } = this.state;
 
-    if (name == "" || email == "" || address == "") {
+    if (first_name == "" || last_name == "" || email == "" || snapchat == "" || password == "" || mobile_number == "") {
       this.setState({
         success: {
           ...success,
-          name: name != "" ? true : false,
+          first_name: first_name != "" ? true : false,
+          last_name: last_name != "" ? true : false,
+          mobile_number: mobile_number != "" ? true : false,
+          snapchat: snapchat != "" ? true : false,
           email: email != "" ? true : false,
-          address: address != "" ? true : false
+          password: password != "" ? true : false
         }
       });
     } else {
@@ -49,10 +66,15 @@ export default class SignUp extends Component {
       );
     }
   }
-
+  /**
+   * @description Call when reminder option switch on/off
+   */
+  toggleSwitch = value => {
+    this.setState({ reminders: value });
+  };
   render() {
     const { navigation } = this.props;
-    let { loading, name, email, address, success } = this.state;
+    let { loading, first_name, last_name, mobile_number, snapchat, email, password, success } = this.state;
     return (
       <SafeAreaView
         style={BaseStyle.safeAreaView}
@@ -77,13 +99,44 @@ export default class SignUp extends Component {
           <View style={styles.contain}>
             <TextInput
               style={[BaseStyle.textInput, { marginTop: 65 }]}
-              onChangeText={text => this.setState({ name: text })}
+              onChangeText={text => this.setState({ first_name: text })}
               autoCorrect={false}
-              placeholder="Name"
+              placeholder="First Name"
               placeholderTextColor={
-                success.name ? BaseColor.grayColor : BaseColor.primaryColor
+                success.first_name ? BaseColor.grayColor : BaseColor.primaryColor
               }
-              value={name}
+              value={first_name}
+            />
+            <TextInput
+              style={[BaseStyle.textInput, { marginTop: 10 }]}
+              onChangeText={text => this.setState({ last_name: text })}
+              autoCorrect={false}
+              placeholder="Last Name"
+              placeholderTextColor={
+                success.last_name ? BaseColor.grayColor : BaseColor.primaryColor
+              }
+              value={last_name}
+            />
+            <TextInput
+              style={[BaseStyle.textInput, { marginTop: 10 }]}
+              onChangeText={text => this.setState({ mobile_number: text })}
+              autoCorrect={false}
+              placeholder="Mobile Number"
+              keyboardType="phone-pad"
+              placeholderTextColor={
+                success.mobile_number ? BaseColor.grayColor : BaseColor.primaryColor
+              }
+              value={mobile_number}
+            />
+            <TextInput
+              style={[BaseStyle.textInput, { marginTop: 10 }]}
+              onChangeText={text => this.setState({ snapchat: text })}
+              autoCorrect={false}
+              placeholder="snapchat"
+              placeholderTextColor={
+                success.snapchat ? BaseColor.grayColor : BaseColor.primaryColor
+              }
+              value={snapchat}
             />
             <TextInput
               style={[BaseStyle.textInput, { marginTop: 10 }]}
@@ -98,14 +151,23 @@ export default class SignUp extends Component {
             />
             <TextInput
               style={[BaseStyle.textInput, { marginTop: 10 }]}
-              onChangeText={text => this.setState({ address: text })}
+              onChangeText={text => this.setState({ password: text })}
               autoCorrect={false}
-              placeholder="Address"
+              placeholder="password"
               placeholderTextColor={
-                success.address ? BaseColor.grayColor : BaseColor.primaryColor
+                success.password ? BaseColor.grayColor : BaseColor.primaryColor
               }
-              value={address}
+              value={password}
             />
+            <View style={styles.profileItem}>
+              <Switch
+                name="angle-right"
+                size={18}
+                onValueChange={this.toggleSwitch}
+                value={this.state.reminders}
+              />
+              <Text style={{color:BaseColor.grayColor}}>I agree to the Terms and Conditions</Text>
+            </View>
             <View style={{ width: "100%" }}>
               <Button
                 full
@@ -113,7 +175,7 @@ export default class SignUp extends Component {
                 loading={loading}
                 onPress={() => this.onSignUp()}
               >
-                Sign Up
+                Save & Login
               </Button>
             </View>
           </View>

@@ -24,6 +24,8 @@ import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 import com.dylanvann.fastimage.FastImageViewPackage;
 // react-native-gesture-handler
 import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
+// react-native-icons
+import com.smixx.reactnativeicons.ReactNativeIcons;
 // react-native-maps
 import com.airbnb.android.react.maps.MapsPackage;
 // react-native-reanimated
@@ -88,6 +90,7 @@ public class PackageList {
       new RNCViewPagerPackage(),
       new FastImageViewPackage(),
       new RNGestureHandlerPackage(),
+      new ReactNativeIcons(),
       new MapsPackage(),
       new ReanimatedPackage(),
       new SafeAreaContextPackage(),

@@ -15,5 +15,9 @@ export default StyleSheet.create({
     alignItems: "center",
     padding: 20,
     width: "100%"
+  },
+  logo: {
+    width: 120,
+    height: 120
   }
 });

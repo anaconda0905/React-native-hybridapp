@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { AuthActions } from "@actions";
 import { bindActionCreators } from "redux";
-import { View, ScrollView, TouchableOpacity, TextInput } from "react-native";
-import { BaseStyle, BaseColor } from "@config";
-import { Header, SafeAreaView, Icon, Text, Button } from "@components";
+import { View, ScrollView, TouchableOpacity, TextInput, CameraRoll, ToastAndroid } from "react-native";
+import { BaseStyle, BaseColor, Images } from "@config";
+import { Header, SafeAreaView, Icon, Text, Button, Image } from "@components";
 import styles from "./styles";
 
 class SignIn extends Component {
@@ -54,13 +54,14 @@ class SignIn extends Component {
 
   render() {
     const { navigation } = this.props;
+    let base64Logo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAA..';
     return (
       <SafeAreaView
         style={BaseStyle.safeAreaView}
         forceInset={{ top: "always" }}
       >
         <Header
-          title="Sign In"
+          title="Relationship Status"
           renderLeft={() => {
             return (
               <Icon
@@ -75,6 +76,7 @@ class SignIn extends Component {
           }}
         />
         <ScrollView>
+          {/* <Image source={Images.logo} style={styles.logo} resizeMode="contain" /> */}
           <View style={styles.contain}>
             <TextInput
               style={[BaseStyle.textInput, { marginTop: 65 }]}
@@ -88,7 +90,7 @@ class SignIn extends Component {
                 });
               }}
               autoCorrect={false}
-              placeholder="ID"
+              placeholder="Relationship status"
               placeholderTextColor={
                 this.state.success.id
                   ? BaseColor.grayColor
@@ -97,7 +99,13 @@ class SignIn extends Component {
               value={this.state.id}
               selectionColor={BaseColor.primaryColor}
             />
-            <TextInput
+            {/* <QRCode
+              value="Just some string value"
+              logo={{ uri: base64Logo }}
+              logoSize={30}
+              logoBackgroundColor='transparent'
+            /> */}
+            {/* <TextInput
               style={[BaseStyle.textInput, { marginTop: 10 }]}
               onChangeText={text => this.setState({ password: text })}
               onFocus={() => {
@@ -118,7 +126,7 @@ class SignIn extends Component {
               }
               value={this.state.password}
               selectionColor={BaseColor.primaryColor}
-            />
+            /> */}
             <View style={{ width: "100%" }}>
               <Button
                 full
@@ -128,16 +136,16 @@ class SignIn extends Component {
                   this.onLogin();
                 }}
               >
-                Sign In
+                Cancel & send notification
               </Button>
             </View>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               onPress={() => navigation.navigate("ResetPassword")}
             >
               <Text body1 grayColor style={{ marginTop: 25 }}>
                 Forgot your password?
               </Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
           </View>
         </ScrollView>
       </SafeAreaView>
