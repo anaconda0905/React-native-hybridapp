@@ -5,6 +5,7 @@ import { bindActionCreators } from "redux";
 import { View, ScrollView, TouchableOpacity, TextInput, CameraRoll, ToastAndroid } from "react-native";
 import { BaseStyle, BaseColor, Images } from "@config";
 import { Header, SafeAreaView, Icon, Text, Button, Image } from "@components";
+import QRCode from 'react-native-qrcode-svg';
 import styles from "./styles";
 
 class SignIn extends Component {
@@ -99,12 +100,12 @@ class SignIn extends Component {
               value={this.state.id}
               selectionColor={BaseColor.primaryColor}
             />
-            {/* <QRCode
-              value="Just some string value"
-              logo={{ uri: base64Logo }}
-              logoSize={30}
-              logoBackgroundColor='transparent'
-            /> */}
+            <View style={styles.qrcode}>
+              <QRCode
+                value="hi"
+                size={200}
+              />
+            </View>
             {/* <TextInput
               style={[BaseStyle.textInput, { marginTop: 10 }]}
               onChangeText={text => this.setState({ password: text })}

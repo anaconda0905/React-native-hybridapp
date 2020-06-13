@@ -41,5 +41,4 @@ export default StyleSheet.create({
   textSlide: {
     marginTop: 30
   },
-  
 });

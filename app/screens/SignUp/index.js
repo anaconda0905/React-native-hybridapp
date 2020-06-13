@@ -60,7 +60,7 @@ export default class SignUp extends Component {
             this.setState({
               loading: false
             });
-            navigation.navigate("SignIn");
+            navigation.navigate("SignUp1");
           }, 500);
         }
       );

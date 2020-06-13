@@ -16,6 +16,7 @@ MERGED from [:react-native-reanimated] D:\_Winner\2020.6\workana-hybridapp-qr\so
 MERGED from [:react-native-safe-area-context] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-safe-area-context\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-splash-screen] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
+MERGED from [:react-native-svg] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-vector-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:rn-range-slider] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\rn-range-slider\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\059dc7e4aec50edc1c33e909605891f0\jetified-react-native-0.61.5\AndroidManifest.xml:2:1-13:12
@@ -204,6 +205,8 @@ MERGED from [:react-native-screens] D:\_Winner\2020.6\workana-hybridapp-qr\sourc
 MERGED from [:react-native-screens] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-splash-screen] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-splash-screen] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-svg] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-vector-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:rn-range-slider] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\rn-range-slider\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
