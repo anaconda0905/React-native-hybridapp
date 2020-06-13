@@ -43,6 +43,7 @@ import Notification from "@screens/Notification";
 import Walkthrough from "@screens/Walkthrough";
 import SignUp from "@screens/SignUp";
 import SignUp1 from "@screens/SignUp1";
+import SignUp2 from "@screens/SignUp2";
 import SignIn from "@screens/SignIn";
 import ResetPassword from "@screens/ResetPassword";
 import ChangePassword from "@screens/ChangePassword";
@@ -223,6 +224,9 @@ const StackNavigator = createStackNavigator(
     },
     SignUp1: {
       screen: SignUp1
+    },
+    SignUp2: {
+      screen: SignUp2
     },
     SignIn: {
       screen: SignIn

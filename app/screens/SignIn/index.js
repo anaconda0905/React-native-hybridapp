@@ -106,28 +106,6 @@ class SignIn extends Component {
                 size={200}
               />
             </View>
-            {/* <TextInput
-              style={[BaseStyle.textInput, { marginTop: 10 }]}
-              onChangeText={text => this.setState({ password: text })}
-              onFocus={() => {
-                this.setState({
-                  success: {
-                    ...this.state.success,
-                    password: true
-                  }
-                });
-              }}
-              autoCorrect={false}
-              placeholder="Password"
-              secureTextEntry={true}
-              placeholderTextColor={
-                this.state.success.password
-                  ? BaseColor.grayColor
-                  : BaseColor.primaryColor
-              }
-              value={this.state.password}
-              selectionColor={BaseColor.primaryColor}
-            /> */}
             <View style={{ width: "100%" }}>
               <Button
                 full

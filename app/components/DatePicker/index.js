@@ -44,16 +44,16 @@ export default class DatePicker extends Component {
                   borderRadius: 8
                 }}
                 markedDates={this.state.markedDates}
-                current={"2019-05-05"}
-                minDate={"2019-05-10"}
-                maxDate={"2019-05-30"}
+                current={"2020-06-05"}
+                minDate={"2020-06-00"}
+                maxDate={"2020-06-30"}
                 onDayPress={day => {
                   console.log("selected day", day);
                 }}
                 onDayLongPress={day => {
                   console.log("selected day", day);
                 }}
-                monthFormat={"dd-MM-yyyy"}
+                monthFormat={"MM-dd-yyyy"}
                 onMonthChange={month => {
                   console.log("month changed", month);
                 }}

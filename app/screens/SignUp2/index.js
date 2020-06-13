@@ -9,7 +9,7 @@ import QRCode from 'react-native-qrcode-svg';
 import styles from "./styles";
 import { Dropdown } from 'react-native-material-dropdown';
 
-class SignUp1 extends Component {
+class SignUp2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -44,7 +44,7 @@ class SignUp1 extends Component {
             this.setState({
               loading: false
             });
-            navigation.navigate("SignUp2");
+            navigation.navigate("SignIn");
           }, 500);
         }
       );
@@ -93,7 +93,7 @@ class SignUp1 extends Component {
                 });
               }}
               autoCorrect={false}
-              placeholder="Mobile Number"
+              placeholder="Ben Number"
               placeholderTextColor={
                 this.state.success.id
                   ? BaseColor.grayColor
@@ -102,12 +102,7 @@ class SignUp1 extends Component {
               value={this.state.id}
               selectionColor={BaseColor.primaryColor}
             />
-            <View style={{ width: "92%" }}>
-              <Dropdown
-                label='I AM ...'
-                data={data}
-              />
-            </View>
+            
             <TextInput
               style={[BaseStyle.textInput, { marginTop: 10 }]}
               onChangeText={text => this.setState({ password: text })}
@@ -120,7 +115,7 @@ class SignUp1 extends Component {
                 });
               }}
               autoCorrect={false}
-              placeholder="Mobile Number"
+              placeholder="Relationship status"
               secureTextEntry={true}
               placeholderTextColor={
                 this.state.success.password
@@ -130,11 +125,12 @@ class SignUp1 extends Component {
               value={this.state.password}
               selectionColor={BaseColor.primaryColor}
             />
-            <DatePicker
-              label="Date"
-              time="01 Jun 2020"
-              style={{ flex: 6, marginTop: 15 }}
-            />
+            <View style={styles.qrcode}>
+              <QRCode
+                value="hi"
+                size={200}
+              />
+            </View>
 
             <View style={{ width: "100%" }}>
               <Button
@@ -145,7 +141,7 @@ class SignUp1 extends Component {
                   this.onLogin();
                 }}
               >
-                Send notification
+                Save
               </Button>
             </View>
           </View>
@@ -165,4 +161,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp1);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp2);
