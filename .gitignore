@@ -59,3 +59,4 @@ buck-out/
 /ios/Pods/
 /android/app/build/
 android/app/build/
+android/.gradle/

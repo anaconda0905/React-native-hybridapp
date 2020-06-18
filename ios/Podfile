@@ -40,6 +40,11 @@ target 'FelixPro' do
   pod 'Google-Maps-iOS-Utils'
   use_native_modules!
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+  pod 'RNSVG', :path => '../node_modules/react-native-svg'
+
+
 end
 
 

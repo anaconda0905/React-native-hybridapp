@@ -41,7 +41,7 @@ let YellowColor = {
  * Main color use for whole application
  */
 let BaseColor = {
-  ...OrangeColor,
+  ...BlueColor,
   ...{
     textPrimaryColor: "#212121",
     textSecondaryColor: "#E0E0E1",

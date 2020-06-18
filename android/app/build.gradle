@@ -45,6 +45,10 @@ android {
                 keyAlias MYAPP_UPLOAD_KEY_ALIAS
                 keyPassword MYAPP_UPLOAD_KEY_PASSWORD
             }
+            storeFile file('your_key_name.keystore')
+            storePassword '!@#$qwer'
+            keyAlias 'your_key_alias'
+            keyPassword '!@#$qwer'
         }
     }
 
@@ -81,6 +85,8 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-svg')
+    implementation project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  
     if (enableHermes) {

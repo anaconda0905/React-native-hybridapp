@@ -5,21 +5,20 @@ INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:1:1-30:12
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:1:1-30:12
 MERGED from [hermes-debug.aar] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\db04403f658a4a99e940d02e0793de07\hermes-debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:react-native-svg] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:react-native-vector-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-community_async-storage] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\async-storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_masked-view] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-community_viewpager] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\viewpager\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-fast-image] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-fast-image\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-gesture-handler] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [:react-native-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-12:12
 MERGED from [:react-native-reanimated] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-safe-area-context\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-splash-screen] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-14:12
-MERGED from [:react-native-svg] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
-MERGED from [:react-native-vector-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:rn-range-slider] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\rn-range-slider\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
-MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\059dc7e4aec50edc1c33e909605891f0\jetified-react-native-0.61.5\AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c69c3a661792c06590b64a8c619c0f78\jetified-react-native-0.61.5\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\cd621d24202984cf4f8f3c0450afdd9a\material-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\ff5579b0fd704d100dd064ce62c44ed8\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.facebook.fresco:fresco:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\b5b68cacfa1a405d1682f9b85477c768\fresco-2.0.0\AndroidManifest.xml:2:1-9:12
@@ -30,13 +29,13 @@ MERGED from [com.facebook.fresco:imagepipeline:2.0.0] C:\Users\HOME\.gradle\cach
 MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a0672568aae8e396ec3846e075b00a22\nativeimagetranscoder-2.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5bfb024382b310e20a5a10cdee1f597\imagepipeline-base-2.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:2:1-13:12
-MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:2:1-16:12
-MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a690766d0e0a3d8813642d48187bdf70\jetified-glide-4.9.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:2:1-16:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c14c4af377025308e86c09e5eeb16aca\jetified-glide-4.9.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\de1e2d2023c0f559a65dcbfe446d880a\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:17:1-38:12
-MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\24c99cd425ddbecd42f91eb06001a366\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:17:1-28:12
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\92c515a7f4d10268fb8a11c818ca9ce8\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\10950133dffae4847ab6594bb3fa86af\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.2.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0ec6e59787098a39c939c592a8a2f891\fragment-1.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c9d230e4b8268ea9a4793d06242acadc\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -57,7 +56,7 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\HOME\.gradle
 MERGED from [androidx.media:media:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a59ddb09cabd13fb0e0e2d52e111ee1e\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\aad1cb5261b584223a83aaefe75d9b97\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.core:core:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\57692e4753601536b7ad4be218820432\core-1.1.0\AndroidManifest.xml:17:1-26:12
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\e1aa3519e64d9211730cfdadef2b1717\jetified-gifdecoder-4.9.0\AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5b77ed508228f90c462e0358cf1cf6c\jetified-gifdecoder-4.9.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\10af930e29fd0bf44507998ace35107f\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6694cd58f7b0210e11a489b1bbbdd6d4\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\fe0e3b0d173a4d29469f46542f25ec25\lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:17:1-24:12
@@ -72,8 +71,8 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\HOME\.gradle\caches
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\8d42aaff3d546c77495adf868d86025c\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\7f2298edcc0be2dbea485080fe7ca170\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66716d543b7cae4ae42f1a71fa52c15c\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:2:1-13:12
-MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d4b4ced7e3983f71576cfe6ccb58a39b\jetified-fbcore-2.0.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\016a234cef0c0c679ce35e89945eb4a8\jetified-android-maps-utils-0.5\AndroidManifest.xml:2:1-13:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\62568f1a92f6f11c8e573a3286dede8c\jetified-fbcore-2.0.0\AndroidManifest.xml:2:1-9:12
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:1:1-30:12
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:1:1-30:12
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:1:1-30:12
@@ -95,8 +94,8 @@ uses-permission#android.permission.INTERNET
 ADDED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:4:5-67
 MERGED from [:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-67
 MERGED from [:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:24:5-67
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:24:5-67
 	android:name
 		ADDED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:4:22-64
 uses-permission#android.permission.SYSTEM_ALERT_WINDOW
@@ -107,32 +106,32 @@ application
 ADDED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:7:5-28:19
 MERGED from [:react-native-splash-screen] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-12:19
 MERGED from [:react-native-splash-screen] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-12:19
-MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\059dc7e4aec50edc1c33e909605891f0\jetified-react-native-0.61.5\AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\059dc7e4aec50edc1c33e909605891f0\jetified-react-native-0.61.5\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c69c3a661792c06590b64a8c619c0f78\jetified-react-native-0.61.5\AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c69c3a661792c06590b64a8c619c0f78\jetified-react-native-0.61.5\AndroidManifest.xml:11:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\cd621d24202984cf4f8f3c0450afdd9a\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\cd621d24202984cf4f8f3c0450afdd9a\material-1.1.0\AndroidManifest.xml:22:5-20
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:11:5-20
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:11:5-20
-MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:10:5-14:19
-MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:10:5-14:19
-MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a690766d0e0a3d8813642d48187bdf70\jetified-glide-4.9.0\AndroidManifest.xml:10:5-20
-MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a690766d0e0a3d8813642d48187bdf70\jetified-glide-4.9.0\AndroidManifest.xml:10:5-20
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:30:5-36:19
-MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\24c99cd425ddbecd42f91eb06001a366\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\24c99cd425ddbecd42f91eb06001a366\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:10:5-14:19
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:10:5-14:19
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c14c4af377025308e86c09e5eeb16aca\jetified-glide-4.9.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c14c4af377025308e86c09e5eeb16aca\jetified-glide-4.9.0\AndroidManifest.xml:10:5-20
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:30:5-36:19
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\92c515a7f4d10268fb8a11c818ca9ce8\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\92c515a7f4d10268fb8a11c818ca9ce8\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:22:5-26:19
 MERGED from [androidx.core:core:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\57692e4753601536b7ad4be218820432\core-1.1.0\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\57692e4753601536b7ad4be218820432\core-1.1.0\AndroidManifest.xml:24:5-89
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\e1aa3519e64d9211730cfdadef2b1717\jetified-gifdecoder-4.9.0\AndroidManifest.xml:9:5-20
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\e1aa3519e64d9211730cfdadef2b1717\jetified-gifdecoder-4.9.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5b77ed508228f90c462e0358cf1cf6c\jetified-gifdecoder-4.9.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5b77ed508228f90c462e0358cf1cf6c\jetified-gifdecoder-4.9.0\AndroidManifest.xml:9:5-20
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6694cd58f7b0210e11a489b1bbbdd6d4\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6694cd58f7b0210e11a489b1bbbdd6d4\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:7:5-11:19
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\016a234cef0c0c679ce35e89945eb4a8\jetified-android-maps-utils-0.5\AndroidManifest.xml:7:5-11:19
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\016a234cef0c0c679ce35e89945eb4a8\jetified-android-maps-utils-0.5\AndroidManifest.xml:7:5-11:19
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\57692e4753601536b7ad4be218820432\core-1.1.0\AndroidManifest.xml:24:18-86
 	android:label
@@ -183,6 +182,10 @@ INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml
 MERGED from [hermes-debug.aar] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\db04403f658a4a99e940d02e0793de07\hermes-debug\AndroidManifest.xml:5:5-44
 MERGED from [hermes-debug.aar] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\db04403f658a4a99e940d02e0793de07\hermes-debug\AndroidManifest.xml:5:5-44
+MERGED from [:react-native-svg] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-svg] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:react-native-vector-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-community_async-storage] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\async-storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_async-storage] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\async-storage\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-community_masked-view] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\@react-native-community\masked-view\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
@@ -193,8 +196,6 @@ MERGED from [:react-native-fast-image] D:\_Winner\2020.6\workana-hybridapp-qr\so
 MERGED from [:react-native-fast-image] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-fast-image\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-gesture-handler] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-reanimated] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-reanimated\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
@@ -205,14 +206,10 @@ MERGED from [:react-native-screens] D:\_Winner\2020.6\workana-hybridapp-qr\sourc
 MERGED from [:react-native-screens] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-screens\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-splash-screen] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-splash-screen] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-splash-screen\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-svg] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-svg] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-svg\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
-MERGED from [:react-native-vector-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-vector-icons] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:rn-range-slider] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\rn-range-slider\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:rn-range-slider] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\rn-range-slider\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\059dc7e4aec50edc1c33e909605891f0\jetified-react-native-0.61.5\AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\059dc7e4aec50edc1c33e909605891f0\jetified-react-native-0.61.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c69c3a661792c06590b64a8c619c0f78\jetified-react-native-0.61.5\AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.61.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c69c3a661792c06590b64a8c619c0f78\jetified-react-native-0.61.5\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\cd621d24202984cf4f8f3c0450afdd9a\material-1.1.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\cd621d24202984cf4f8f3c0450afdd9a\material-1.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\ff5579b0fd704d100dd064ce62c44ed8\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -233,20 +230,20 @@ MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\HOME\.gradle
 MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5bfb024382b310e20a5a10cdee1f597\imagepipeline-base-2.0.0\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.soloader:soloader:0.6.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66447e97334523a470294467b9e56c2c\soloader-0.6.0\AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a690766d0e0a3d8813642d48187bdf70\jetified-glide-4.9.0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\a690766d0e0a3d8813642d48187bdf70\jetified-glide-4.9.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c14c4af377025308e86c09e5eeb16aca\jetified-glide-4.9.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c14c4af377025308e86c09e5eeb16aca\jetified-glide-4.9.0\AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\de1e2d2023c0f559a65dcbfe446d880a\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\de1e2d2023c0f559a65dcbfe446d880a\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\24c99cd425ddbecd42f91eb06001a366\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\24c99cd425ddbecd42f91eb06001a366\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\92c515a7f4d10268fb8a11c818ca9ce8\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\92c515a7f4d10268fb8a11c818ca9ce8\jetified-play-services-tasks-16.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\10950133dffae4847ab6594bb3fa86af\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\10950133dffae4847ab6594bb3fa86af\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.2.1] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0ec6e59787098a39c939c592a8a2f891\fragment-1.2.1\AndroidManifest.xml:20:5-22:41
@@ -287,8 +284,8 @@ MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\HO
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\aad1cb5261b584223a83aaefe75d9b97\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.core:core:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\57692e4753601536b7ad4be218820432\core-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\57692e4753601536b7ad4be218820432\core-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\e1aa3519e64d9211730cfdadef2b1717\jetified-gifdecoder-4.9.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\e1aa3519e64d9211730cfdadef2b1717\jetified-gifdecoder-4.9.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5b77ed508228f90c462e0358cf1cf6c\jetified-gifdecoder-4.9.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\f5b77ed508228f90c462e0358cf1cf6c\jetified-gifdecoder-4.9.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\10af930e29fd0bf44507998ace35107f\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\10af930e29fd0bf44507998ace35107f\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\6694cd58f7b0210e11a489b1bbbdd6d4\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -317,10 +314,10 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\7f2298edcc0be2dbea485080fe7ca170\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66716d543b7cae4ae42f1a71fa52c15c\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.print:print:1.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\66716d543b7cae4ae42f1a71fa52c15c\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:5:5-43
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:5:5-43
-MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d4b4ced7e3983f71576cfe6ccb58a39b\jetified-fbcore-2.0.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d4b4ced7e3983f71576cfe6ccb58a39b\jetified-fbcore-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\016a234cef0c0c679ce35e89945eb4a8\jetified-android-maps-utils-0.5\AndroidManifest.xml:5:5-43
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\016a234cef0c0c679ce35e89945eb4a8\jetified-android-maps-utils-0.5\AndroidManifest.xml:5:5-43
+MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\62568f1a92f6f11c8e573a3286dede8c\jetified-fbcore-2.0.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\62568f1a92f6f11c8e573a3286dede8c\jetified-fbcore-2.0.0\AndroidManifest.xml:5:5-7:41
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml
 INJECTED from D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -336,40 +333,40 @@ ADDED from [:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\no
 	android:name
 		ADDED from [:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-78
 meta-data#com.bumptech.glide.integration.okhttp3.OkHttpGlideModule
-ADDED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:11:9-13:43
+ADDED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:11:9-13:43
 	android:value
-		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:13:13-40
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:13:13-40
 	android:name
-		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:12:13-84
+		ADDED from [com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:12:13-84
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:23:5-79
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:23:5-79
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:23:22-76
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:23:22-76
 uses-feature#0x00020000
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:26:5-28:35
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:26:5-28:35
 	android:glEsVersion
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:27:9-41
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:27:9-41
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:28:9-32
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:28:9-32
 uses-library#org.apache.http.legacy
-ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:33:9-35:40
+ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:33:9-35:40
 	android:required
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:35:13-37
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:35:13-37
 	android:name
-		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:34:13-50
+		ADDED from [com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:34:13-50
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:23:9-25:69
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:8:9-10:69
-MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\78232ebb9f4d406e4a651c999d16c4bd\jetified-android-maps-utils-0.5\AndroidManifest.xml:8:9-10:69
+ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:23:9-25:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\016a234cef0c0c679ce35e89945eb4a8\jetified-android-maps-utils-0.5\AndroidManifest.xml:8:9-10:69
+MERGED from [com.google.maps.android:android-maps-utils:0.5] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\016a234cef0c0c679ce35e89945eb4a8\jetified-android-maps-utils-0.5\AndroidManifest.xml:8:9-10:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:24:13-58

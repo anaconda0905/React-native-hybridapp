@@ -20,15 +20,15 @@
 13-->[:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:5-81
 13-->[:react-native-maps] D:\_Winner\2020.6\workana-hybridapp-qr\source\node_modules\react-native-maps\lib\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:10:22-78
 14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:23:5-79
-14-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:23:22-76
+14-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:23:5-79
+14-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:23:22-76
 15
 16    <uses-feature
-16-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:26:5-28:35
+16-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:26:5-28:35
 17        android:glEsVersion="0x00020000"
-17-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:27:9-41
+17-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:27:9-41
 18        android:required="true" />
-18-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:28:9-32
+18-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:28:9-32
 19
 20    <application
 20-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:7:5-28:19
@@ -80,33 +80,33 @@
 44-->D:\_Winner\2020.6\workana-hybridapp-qr\source\android\app\src\main\AndroidManifest.xml:27:17-81
 45
 46        <meta-data
-46-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:11:9-13:43
+46-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:11:9-13:43
 47            android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
-47-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:12:13-84
+47-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:12:13-84
 48            android:value="GlideModule" /> <!-- Needs to be explicitly declared on P+ -->
-48-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\074e69ebc74348cd96a4968daed0b64f\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:13:13-40
+48-->[com.github.bumptech.glide:okhttp3-integration:4.9.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\d6f1612bb479407ef030ca0a1570187e\jetified-okhttp3-integration-4.9.0\AndroidManifest.xml:13:13-40
 49        <uses-library
-49-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:33:9-35:40
+49-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:33:9-35:40
 50            android:name="org.apache.http.legacy"
-50-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:34:13-50
+50-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:34:13-50
 51            android:required="false" />
-51-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\c371f0fffe6c9c6ad966626021f0346e\jetified-play-services-maps-16.1.0\AndroidManifest.xml:35:13-37
+51-->[com.google.android.gms:play-services-maps:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\244b34f0665e446e5c9f43d481143e00\jetified-play-services-maps-16.1.0\AndroidManifest.xml:35:13-37
 52
 53        <activity
-53-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:23:9-26:75
+53-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:23:9-26:75
 54            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-54-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:24:13-79
+54-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:24:13-79
 55            android:exported="false"
-55-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:25:13-37
+55-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:25:13-37
 56            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-56-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\0eb114534f875f9c2c2f3aff460b125b\jetified-play-services-base-16.1.0\AndroidManifest.xml:26:13-72
+56-->[com.google.android.gms:play-services-base:16.1.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\38451c7bb8d2d154357e2869bc26218a\jetified-play-services-base-16.1.0\AndroidManifest.xml:26:13-72
 57
 58        <meta-data
-58-->[com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:23:9-25:69
+58-->[com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:23:9-25:69
 59            android:name="com.google.android.gms.version"
-59-->[com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:24:13-58
+59-->[com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:24:13-58
 60            android:value="@integer/google_play_services_version" />
-60-->[com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\321a7653150f3938d7e5c641159e857d\jetified-play-services-basement-16.2.0\AndroidManifest.xml:25:13-66
+60-->[com.google.android.gms:play-services-basement:16.2.0] C:\Users\HOME\.gradle\caches\transforms-2\files-2.1\80fa397053d8a31cd76adc7ebf4b094a\jetified-play-services-basement-16.2.0\AndroidManifest.xml:25:13-66
 61    </application>
 62
 63</manifest>
