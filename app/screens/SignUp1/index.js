@@ -2,13 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { AuthActions } from "@actions";
 import { bindActionCreators } from "redux";
-import { View, ScrollView, TouchableOpacity, TextInput, CameraRoll, ToastAndroid } from "react-native";
+import { View, ScrollView, TouchableOpacity, CameraRoll, ToastAndroid } from "react-native";
 import { BaseStyle, BaseColor, Images } from "@config";
 import { Header, DatePicker, SafeAreaView, Icon, Text, Button, Image } from "@components";
 import QRCode from 'react-native-qrcode-svg';
 import styles from "./styles";
 import { Dropdown } from 'react-native-material-dropdown';
-
+import { TextInput } from 'react-native-paper';
 class SignUp1 extends Component {
   constructor(props) {
     super(props);
@@ -44,7 +44,7 @@ class SignUp1 extends Component {
             this.setState({
               loading: false
             });
-            navigation.navigate("SignUp2");
+            navigation.navigate("SignUp1");
           }, 500);
         }
       );
@@ -65,24 +65,21 @@ class SignUp1 extends Component {
       >
         <Header
           title="Relationship Status"
+          
           renderLeft={() => {
             return (
-              <Icon
-                name="arrow-left"
-                size={20}
-                color={BaseColor.primaryColor}
-              />
+              <Icon name="bell" size={24} color={BaseColor.primaryColor} />
             );
           }}
           onPressLeft={() => {
-            navigation.goBack();
+            navigation.navigate("Notification");
           }}
         />
         <ScrollView>
           {/* <Image source={Images.logo} style={styles.logo} resizeMode="contain" /> */}
           <View style={styles.contain}>
             <TextInput
-              style={[BaseStyle.textInput, { marginTop: 65 }]}
+              style={[BaseStyle.textInput, { marginTop: 15 }]}
               onChangeText={text => this.setState({ id: text })}
               onFocus={() => {
                 this.setState({
@@ -102,12 +99,19 @@ class SignUp1 extends Component {
               value={this.state.id}
               selectionColor={BaseColor.primaryColor}
             />
-            <View style={{ width: "92%" }}>
+            <View style={{ width: "100%" }}>
               <Dropdown
                 label='I AM ...'
                 data={data}
               />
             </View>
+            
+            <View style={{ width: "20%" }}>
+              <Text style={BaseStyle.textInput2}>
+                To
+              </Text>
+            </View>
+
             <TextInput
               style={[BaseStyle.textInput, { marginTop: 10 }]}
               onChangeText={text => this.setState({ password: text })}
@@ -121,7 +125,7 @@ class SignUp1 extends Component {
               }}
               autoCorrect={false}
               placeholder="Mobile Number"
-              secureTextEntry={true}
+              // secureTextEntry={true}
               placeholderTextColor={
                 this.state.success.password
                   ? BaseColor.grayColor
@@ -140,12 +144,27 @@ class SignUp1 extends Component {
               <Button
                 full
                 loading={this.state.loading}
-                style={{ marginTop: 20 }}
+                style={{ marginTop: 20, height: 46 }}
                 onPress={() => {
                   this.onLogin();
                 }}
               >
                 Send notification
+              </Button>
+              <Button
+                full
+                style={{ marginTop: 20, height: 46 }}
+              >
+                Enter Pin Number & Save
+              </Button>
+              <Text style={BaseStyle.textInput2}>
+                Or
+              </Text>
+              <Button
+                full
+                style={{ marginTop: 20, height: 46 }}
+              >
+                Cancel Relation & Send Notification
               </Button>
             </View>
           </View>

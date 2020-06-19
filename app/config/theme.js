@@ -14,11 +14,38 @@ export const BaseStyle = StyleSheet.create({
   bodyMarginDefault: {
     marginHorizontal: 20
   },
-  textInput: {
+  textInput2: {
     height: 46,
+    marginTop: 10,
+    backgroundColor: BaseColor.whiteColor,
+    padding: 10,
+    textAlign: "center",
+    fontSize: 20,
+    width: "100%",
+    justifyContent: "center"
+  },
+  textInput1: {
+    height: 46,
+    marginTop: 20,
     backgroundColor: BaseColor.fieldColor,
     borderRadius: 5,
     padding: 10,
+    textAlign: "center",
+    fontSize: 17,
+    width: "100%",
+    justifyContent: "center"
+  },
+  textInput: {
+    height: 46,
+    marginTop: 5,
+    backgroundColor: BaseColor.fieldColor,
+    borderRadius: 5,
+    width: "100%",
+    justifyContent: "center"
+  },
+  textInput_walk: {
+    height: 46,
+    backgroundColor: BaseColor.whiteColor,
     width: "100%",
     justifyContent: "center"
   },

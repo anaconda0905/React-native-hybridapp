@@ -8,7 +8,7 @@ export default StyleSheet.create({
   },
   wrapper: {
     width: "100%",
-    height: 350
+    height: 250
   },
   contentPage: {
     bottom: 0
@@ -25,9 +25,9 @@ export default StyleSheet.create({
     marginTop: 25
   },
   img: {
-    width: Utils.scaleWithPixel(200),
-    height: Utils.scaleWithPixel(200),
-    borderRadius: Utils.scaleWithPixel(200) / 2
+    width: Utils.scaleWithPixel(150),
+    height: Utils.scaleWithPixel(150),
+    borderRadius: Utils.scaleWithPixel(50) / 2
   },
   userplus:{
     alignItems: "flex-end", 

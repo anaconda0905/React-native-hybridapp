@@ -56,9 +56,6 @@ class Loading extends Component {
             alignItems: "center"
           }}
         >
-          <Text title1 whiteColor semibold>
-            Relationship status
-          </Text>
           <ActivityIndicator
             size="large"
             color={BaseColor.whiteColor}

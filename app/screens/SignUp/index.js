@@ -91,9 +91,11 @@ export default class SignUp extends Component {
               />
             );
           }}
+          
           onPressLeft={() => {
             navigation.goBack();
           }}
+          
         />
         <ScrollView>
           <View style={styles.contain}>

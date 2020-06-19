@@ -119,7 +119,7 @@ const bottomTabNavigatorConfig = {
 // Tab bar navigation
 const routeConfigs = {
   Home: {
-    screen: Home,
+    screen: SignUp1,
     navigationOptions: ({ navigation }) => ({
       title: "Home",
       tabBarIcon: ({ focused, tintColor }) => {
@@ -127,42 +127,15 @@ const routeConfigs = {
       }
     })
   },
-  Booking: {
-    screen: Booking,
-    navigationOptions: ({ navigation }) => ({
-      title: "Booking",
-      tabBarIcon: ({ focused, tintColor }) => {
-        return <Icon color={tintColor} name="bookmark" size={20} solid />;
-      }
-    })
-  },
   Messenger: {
-    screen: Messenger,
+    screen: Notification,
     navigationOptions: ({ navigation }) => ({
-      title: "Message",
+      title: "Notification",
       tabBarIcon: ({ focused, tintColor }) => {
-        return <Icon solid color={tintColor} name="envelope" size={20} solid />;
+        return <Icon solid color={tintColor} name="bell" size={20} solid />;
       }
     })
   },
-  Post: {
-    screen: Post,
-    navigationOptions: ({ navigation }) => ({
-      title: "News",
-      tabBarIcon: ({ focused, tintColor }) => {
-        return <Icon color={tintColor} name="copy" size={20} solid />;
-      }
-    })
-  },
-  Profile: {
-    screen: Profile,
-    navigationOptions: ({ navigation }) => ({
-      title: "Account",
-      tabBarIcon: ({ focused, tintColor }) => {
-        return <Icon solid color={tintColor} name="user-circle" size={20} />;
-      }
-    })
-  }
 };
 
 // Define bottom navigator as a screen in stack

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { AuthActions } from "@actions";
-import { View, TouchableOpacity, ScrollView, TextInput } from "react-native";
+import { View, TouchableOpacity, ScrollView } from "react-native";
 import { bindActionCreators } from "redux";
 import { SafeAreaView, Text, Button, Image, Icon } from "@components";
 import styles from "./styles";
@@ -10,6 +10,7 @@ import { BaseColor, BaseStyle, Images } from "@config";
 import * as Utils from "@utils";
 import { Rating, AirbnbRating } from 'react-native-ratings';
 import { Dropdown } from 'react-native-material-dropdown';
+import { TextInput } from 'react-native-paper';
 
 class Walkthrough extends Component {
   constructor(props) {
@@ -21,9 +22,6 @@ class Walkthrough extends Component {
       inputext: '',
       slide: [
         { key: 1, image: Images.trip2 },
-        { key: 2, image: Images.trip1 },
-        { key: 3, image: Images.trip3 },
-        { key: 4, image: Images.trip4 }
       ]
     };
   }
@@ -46,7 +44,7 @@ class Walkthrough extends Component {
             this.setState({
               loading: false
             });
-          }
+          } 
         });
       }
     );
@@ -61,7 +59,7 @@ class Walkthrough extends Component {
     }, {
       value: 'Snapchat',
     }];
-    
+
     return (
       <SafeAreaView
         style={BaseStyle.safeAreaView}
@@ -77,13 +75,13 @@ class Walkthrough extends Component {
           }
         >
           <View style={styles.contentActionTop}>
-              <TouchableOpacity onPress={() => {
-                navigation.navigate("ChangeLanguage");
-              }}>
-                <Text body1 primaryColor>
-                  Eng/Arabic
+            <TouchableOpacity onPress={() => {
+              navigation.navigate("ChangeLanguage");
+            }}>
+              <Text body1 primaryColor>
+                Eng/Arabic
                 </Text>
-              </TouchableOpacity>
+            </TouchableOpacity>
 
             <TouchableOpacity onPress={() => navigation.navigate("SignUp")} style={styles.userplus}>
               <Icon name="user-plus" color={BaseColor.primaryColor} size={30} solid />
@@ -104,7 +102,7 @@ class Walkthrough extends Component {
                   <View style={styles.slide} key={item.key}>
                     <Image source={item.image} style={styles.img} />
                     <Text body1 style={styles.textSlide}>
-                      I am relationship status
+                      Relationship status
                     </Text>
                   </View>
                 );
@@ -112,24 +110,14 @@ class Walkthrough extends Component {
             </Swiper>
           </View>
           <View style={{ width: "100%" }}>
-            {/* <Button
-              full
-              style={{
-                backgroundColor: BaseColor.navyBlue,
-                marginTop: 20
-              }}
-              onPress={() => {
-                this.authentication();
-              }}
-            >
-              Login with Facebook
-            </Button> */}
             <Dropdown
+              style={{ marginLeft: 10 }}
               label='Search By'
               data={data}
             />
+
             <TextInput
-              style={BaseStyle.textInput}
+              style={BaseStyle.textInput_walk}
               onChangeText={text => this.setState({ inputext: text })}
               autoCorrect={false}
               placeholder=""
@@ -141,25 +129,19 @@ class Walkthrough extends Component {
               full
               style={{ marginTop: 20 }}
               loading={this.state.loading}
+            >
+              Search
+            </Button>
+            <Text style={BaseStyle.textInput1}>
+            </Text>
+            <Button
+              full
+              style={{ marginTop: 20 }}
+              loading={this.state.loading}
               onPress={() => navigation.navigate("SignIn")}
             >
               Sign In
             </Button>
-            {/* <View style={styles.contentActionBottom}>
-              <TouchableOpacity onPress={() => navigation.navigate("SignUp")}>
-                <Text body1 grayColor>
-                  Haven’t registered yet?
-                </Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity onPress={() => this.authentication()}>
-                <Text body1 primaryColor>
-                  Join Now
-                </Text>
-              </TouchableOpacity>
-            </View> */}
-            <AirbnbRating reviews={[""]} />
-
           </View>
         </ScrollView>
       </SafeAreaView>
