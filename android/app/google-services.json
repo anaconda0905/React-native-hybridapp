@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "285519403336",
+    "firebase_url": "https://relationship-status-db665.firebaseio.com",
+    "project_id": "relationship-status-db665",
+    "storage_bucket": "relationship-status-db665.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285519403336:android:e9598dcfe2ea51fe62bb7d",
+        "android_client_info": {
+          "package_name": "com.relationship"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285519403336-kjqdp0g37r8jn0m16frcll38nbuh6ffh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmMU9XtUYD9NgNuqO71rlbGnCAM8PwJP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285519403336-kjqdp0g37r8jn0m16frcll38nbuh6ffh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
