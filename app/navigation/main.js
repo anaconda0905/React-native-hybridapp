@@ -43,8 +43,17 @@ const bottomTabNavigatorConfig = {
 
 // Tab bar navigation
 const routeConfigs = {
+    ChangeLanguage: {
+        screen: ChangeLanguage,
+        navigationOptions: ({navigation}) => ({
+            title: "Language",
+            tabBarIcon: ({focused, tintColor}) => {
+                return <Icon solid color={tintColor} name="language" size={20} solid/>;
+            }
+        })
+    },
     Home: {
-        screen: Walkthrough,
+        screen: SignUp1,
         navigationOptions: ({navigation}) => ({
             title: "Home",
             tabBarIcon: ({focused, tintColor}) => {
@@ -53,14 +62,14 @@ const routeConfigs = {
         })
     },
     Messenger: {
-        screen: SignIn,
+        screen: Notification,
         navigationOptions: ({navigation}) => ({
-            title: "Sign In",
+            title: "Notification",
             tabBarIcon: ({focused, tintColor}) => {
                 return <Icon solid color={tintColor} name="bell" size={20} solid/>;
             }
         })
-    },
+    }
 };
 
 // Define bottom navigator as a screen in stack

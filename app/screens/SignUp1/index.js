@@ -72,7 +72,12 @@ class SignUp1 extends Component {
                     }}
                 />
                 <ScrollView>
-                    {/* <Image source={Images.logo} style={styles.logo} resizeMode="contain" /> */}
+                    <View style={styles.contain}>
+
+                        <Image source={Images.trip2} style={styles.logo} resizeMode="contain"/>
+
+                    </View>
+
                     <View style={styles.contain}>
                         <TextInput
                             style={[BaseStyle.textInput, {marginTop: 15}]}
