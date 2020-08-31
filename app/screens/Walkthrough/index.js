@@ -8,7 +8,6 @@ import styles from "./styles";
 import Swiper from "react-native-swiper";
 import {BaseColor, BaseStyle, Images} from "@config";
 import * as Utils from "@utils";
-import SendSMS from 'react-native-sms';
 import {Rating, AirbnbRating} from 'react-native-ratings';
 import {Dropdown} from 'react-native-material-dropdown';
 import {TextInput} from 'react-native-paper';
@@ -30,24 +29,7 @@ class Walkthrough extends Component {
         };
     }
 
-    onSend(){
-        SendSMS.send({
-            //Message body
-            body: 'Please follow me',
-            //Recipients Number
-            recipients: ['15904557869'],
-            //An array of types that would trigger a "completed" response when using android
-            successTypes: ['sent', 'queued']
-        }, (completed, cancelled, error) => {
-            if(completed){
-                console.log('SMS Sent Completed');
-            }else if(cancelled){
-                console.log('SMS Sent Cancelled');
-            }else if(error){
-                console.log('Some error occured');
-            }
-        });
-    }
+
 
     onSearch() {
 
@@ -242,14 +224,7 @@ class Walkthrough extends Component {
                             value={this.state.input_text}
                             selectionColor={BaseColor.primaryColor}
                         />
-                        <Button
-                            full
-                            style={{marginTop: 20}}
-                            loading={this.state.loading}
-                            onPress={() => this.onSend()}
-                        >
-                            Send sms
-                        </Button>
+
                         <Button
                             full
                             style={{marginTop: 20}}

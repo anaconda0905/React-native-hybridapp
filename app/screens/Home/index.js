@@ -10,8 +10,9 @@ import styles from "./styles";
 import {Dropdown} from 'react-native-material-dropdown';
 import {TextInput} from 'react-native-paper';
 import messaging from "@react-native-firebase/messaging";
+import SendSMS from 'react-native-sms';
 
-class SignUp1 extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -45,6 +46,25 @@ class SignUp1 extends Component {
                 console.log(token);
             });
 
+    }
+
+    onSend1(){
+        SendSMS.send({
+            //Message body
+            body: 'Please follow me',
+            //Recipients Number
+            recipients: ['15904557869'],
+            //An array of types that would trigger a "completed" response when using android
+            successTypes: ['sent', 'queued']
+        }, (completed, cancelled, error) => {
+            if(completed){
+                console.log('SMS Sent Completed');
+            }else if(cancelled){
+                console.log('SMS Sent Cancelled');
+            }else if(error){
+                console.log('Some error occured');
+            }
+        });
     }
 
     render() {
@@ -135,13 +155,8 @@ class SignUp1 extends Component {
                             value={this.state.password}
                             selectionColor={BaseColor.primaryColor}
                         />
-                        <DatePicker
-                            label="Date"
-                            time="01 Jun 2020"
-                            style={{flex: 6, marginTop: 15}}
-                        />
 
-                        <View style={{width: "100%"}}>
+                        <View style={{width: "100%",marginTop:20}}>
                             <Button
                                 full
                                 loading={this.state.loading}
@@ -152,20 +167,15 @@ class SignUp1 extends Component {
                             >
                                 Send notification
                             </Button>
+
                             <Button
                                 full
                                 style={{marginTop: 20, height: 46}}
+                                onPress={() => {
+                                    this.onSend1();
+                                }}
                             >
-                                Enter Pin Number & Save
-                            </Button>
-                            <Text style={BaseStyle.textInput2}>
-                                Or
-                            </Text>
-                            <Button
-                                full
-                                style={{marginTop: 20, height: 46}}
-                            >
-                                Cancel Relation & Send Notification
+                                Cancel Relation
                             </Button>
                         </View>
                     </View>
@@ -187,4 +197,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp1);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

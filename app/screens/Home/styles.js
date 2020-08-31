@@ -20,6 +20,7 @@ export default StyleSheet.create({
     logo: {
         width: Utils.scaleWithPixel(150),
         height: Utils.scaleWithPixel(150),
-        borderRadius: Utils.scaleWithPixel(50) / 2
+        borderRadius: Utils.scaleWithPixel(50) / 2,
+        marginTop: 10,
     },
 });

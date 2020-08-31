@@ -6,12 +6,8 @@ import {Icon} from "@components";
 import * as Utils from "@utils";
 
 /* Stack Screen */
-import ChangeLanguage from "@screens/ChangeLanguage";
 import Notification from "@screens/Notification";
-import SignIn from "@screens/SignIn";
-import SignUp from "@screens/SignUp";
-import SignUp1 from "@screens/SignUp1";
-import Walkthrough from "@screens/Walkthrough";
+import Home from "@screens/Home";
 
 
 // Transition for navigation by screen name
@@ -43,17 +39,9 @@ const bottomTabNavigatorConfig = {
 
 // Tab bar navigation
 const routeConfigs = {
-    ChangeLanguage: {
-        screen: ChangeLanguage,
-        navigationOptions: ({navigation}) => ({
-            title: "Language",
-            tabBarIcon: ({focused, tintColor}) => {
-                return <Icon solid color={tintColor} name="language" size={20} solid/>;
-            }
-        })
-    },
+
     Home: {
-        screen: SignUp1,
+        screen: Home,
         navigationOptions: ({navigation}) => ({
             title: "Home",
             tabBarIcon: ({focused, tintColor}) => {
@@ -84,25 +72,9 @@ const StackNavigator = createStackNavigator(
         BottomTabNavigator: {
             screen: BottomTabNavigator
         },
-        ChangeLanguage: {
-            screen: ChangeLanguage
-        },
         Notification: {
             screen: Notification
         },
-
-        SignIn: {
-            screen: SignIn
-        },
-        SignUp: {
-            screen: SignUp
-        },
-        SignUp1: {
-            screen: SignUp1
-        },
-        Walkthrough: {
-            screen: Walkthrough
-        }
     },
     {
         headerMode: "none",

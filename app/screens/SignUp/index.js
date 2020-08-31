@@ -93,7 +93,7 @@ export default class SignUp extends Component {
                                     icon: 'auto',
                                 });
                                 setTimeout(() => {
-                                    navigation.navigate("SignUp1");
+                                    navigation.navigate("Home");
                                 }, 2000);
 
                             })
@@ -164,7 +164,7 @@ export default class SignUp extends Component {
                         }}
 
                         onPressLeft={() => {
-                            navigation.goBack();
+                            navigation.navigate("Walkthrough");
                         }}
 
                     />

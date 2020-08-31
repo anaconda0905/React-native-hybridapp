@@ -62,7 +62,7 @@ class SignIn extends Component {
                                 icon: 'auto',
                             });
                             setTimeout(() => {
-                                navigation.navigate("SignUp1");
+                                navigation.navigate("Home");
                                 this.props.actions.authentication(true, uid, response => {});
                             }, 2000);
                         })
@@ -106,7 +106,7 @@ class SignIn extends Component {
                             );
                         }}
                         onPressLeft={() => {
-                            navigation.goBack();
+                            navigation.navigate("Walkthrough");
                         }}
                     />
                     <ScrollView
