@@ -35,9 +35,9 @@ class Loading extends Component {
         }
     }
 
-    componentWillMount() {
-      this.props.actions.authentication(false, response => {});
-    }
+    // componentWillMount() {
+    //   this.props.actions.authentication(false, response => {});
+    // }
 
     componentDidMount() {
         this.onProcess();

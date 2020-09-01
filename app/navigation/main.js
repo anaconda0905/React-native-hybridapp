@@ -8,7 +8,9 @@ import * as Utils from "@utils";
 /* Stack Screen */
 import Notification from "@screens/Notification";
 import Home from "@screens/Home";
-
+import ProfileEdit from "@screens/ProfileEdit";
+import Setting from "@screens/Setting";
+import ChangePassword from "@screens/ChangePassword";
 
 // Transition for navigation by screen name
 const handleCustomTransition = ({scenes}) => {
@@ -39,7 +41,15 @@ const bottomTabNavigatorConfig = {
 
 // Tab bar navigation
 const routeConfigs = {
-
+    Setting: {
+        screen: Setting,
+        navigationOptions: ({navigation}) => ({
+            title: "Setting",
+            tabBarIcon: ({focused, tintColor}) => {
+                return <Icon color={tintColor} name="cog" size={20} solid/>;
+            }
+        })
+    },
     Home: {
         screen: Home,
         navigationOptions: ({navigation}) => ({
@@ -49,7 +59,7 @@ const routeConfigs = {
             }
         })
     },
-    Messenger: {
+    Notification: {
         screen: Notification,
         navigationOptions: ({navigation}) => ({
             title: "Notification",
@@ -72,9 +82,18 @@ const StackNavigator = createStackNavigator(
         BottomTabNavigator: {
             screen: BottomTabNavigator
         },
+        Setting: {
+            screen: Setting
+        },
         Notification: {
             screen: Notification
         },
+        ChangePassword: {
+            screen: ChangePassword
+        },
+        ProfileEdit: {
+            screen: ProfileEdit
+        }
     },
     {
         headerMode: "none",
