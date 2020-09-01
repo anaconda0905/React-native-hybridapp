@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import {
     View,
     FlatList,
-    TextInput,
     ActivityIndicator,
     TouchableOpacity
 } from "react-native";
@@ -12,8 +11,11 @@ import styles from "./styles";
 
 // Load sample language data list
 import {LanguageData} from "@data";
+import {connect} from "react-redux";
+import {AuthActions} from "@actions";
+import {bindActionCreators} from "redux";
 
-export default class ChangeLanguage extends Component {
+class ChangeLanguage extends Component {
     constructor(props) {
         super(props);
 
@@ -25,6 +27,23 @@ export default class ChangeLanguage extends Component {
         };
     }
 
+    componentDidMount(){
+        this.setState({
+            language: this.state.language.map(item => {
+                if (item.language == this.props.auth.user.lang) {
+                    return {
+                        ...item,
+                        checked: true
+                    };
+                } else {
+                    return {
+                        ...item,
+                        checked: false
+                    };
+                }
+            })
+        });
+    }
     /**
      * @description Called when setting language is selected
      * @author Passion UI <passionui.com>
@@ -32,8 +51,10 @@ export default class ChangeLanguage extends Component {
      * @param {object} select
      */
     onChange(select) {
+
         this.setState({
             language: this.state.language.map(item => {
+                this.setState({country: select.language});
                 if (item.language == select.language) {
                     return {
                         ...item,
@@ -97,6 +118,7 @@ export default class ChangeLanguage extends Component {
                                     this.setState({
                                         loading: false
                                     });
+                                    this.props.actions.changelanguage(this.state.country, response => {});
                                     navigation.navigate("Walkthrough");
                                 }, 500);
                             }
@@ -104,15 +126,6 @@ export default class ChangeLanguage extends Component {
                     }}
                 />
                 <View style={styles.contain}>
-                    <TextInput
-                        style={BaseStyle.textInput}
-                        onChangeText={text => this.setState({country: text})}
-                        autoCorrect={false}
-                        placeholder="Search Country"
-                        placeholderTextColor={BaseColor.grayColor}
-                        value={this.state.country}
-                        selectionColor={BaseColor.primaryColor}
-                    />
                     <View style={{width: "100%", height: "100%"}}>
                         <FlatList
                             data={language}
@@ -150,3 +163,16 @@ export default class ChangeLanguage extends Component {
         );
     }
 }
+const mapStateToProps = state => {
+    return {
+        auth:state.auth,
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        actions: bindActionCreators(AuthActions, dispatch)
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChangeLanguage);

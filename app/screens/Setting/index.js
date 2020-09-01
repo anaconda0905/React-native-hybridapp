@@ -59,17 +59,11 @@ class Setting extends Component {
                             />
                         );
                     }}
-                    renderRight={() => {
-                        return (
-                            <Icon name="bell" size={24} color={BaseColor.primaryColor} />
-                        );
-                    }}
+
                     onPressLeft={() => {
                         navigation.goBack();
                     }}
-                    onPressRight={() => {
-                        navigation.navigate("Notification");
-                    }}
+
                 />
                 <ScrollView>
                     <View style={styles.contain}>

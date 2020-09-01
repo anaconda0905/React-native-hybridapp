@@ -14,7 +14,13 @@ export default (state = initialState, action = {}) => {
         case actionTypes.LOGIN:
             return {
                 ...state,
-                login: action.data
+                login: action.data,
+            };
+
+        case actionTypes.LANG:
+            return {
+                ...state,
+                user: action.data,
             };
         default:
             return state;

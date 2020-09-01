@@ -2,10 +2,9 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {AuthActions} from "@actions";
 import {bindActionCreators} from "redux";
-import {View, ScrollView, TouchableOpacity, CameraRoll, ToastAndroid} from "react-native";
+import {View, ScrollView} from "react-native";
 import {BaseStyle, BaseColor, Images} from "@config";
 import {Header, DatePicker, SafeAreaView, Icon, Text, Button, Image} from "@components";
-import QRCode from 'react-native-qrcode-svg';
 import styles from "./styles";
 import {Dropdown} from 'react-native-material-dropdown';
 import {TextInput} from 'react-native-paper';
@@ -39,7 +38,7 @@ class Home extends Component {
 
     onSend() {
         const {navigation} = this.props;
-        console.log(this.props.auth.login.uid);
+        console.log(this.props.auth);
         messaging()
             .getToken()
             .then((token) => {
@@ -81,13 +80,12 @@ class Home extends Component {
             >
                 <Header
                     title="Relationship Status"
-
-                    renderLeft={() => {
+                    renderRight={() => {
                         return (
-                            <Icon name="bell" size={24} color={BaseColor.primaryColor}/>
+                            <Icon name="bell" size={24} color={BaseColor.primaryColor} />
                         );
                     }}
-                    onPressLeft={() => {
+                    onPressRight={() => {
                         navigation.navigate("Notification");
                     }}
                 />

@@ -29,7 +29,9 @@ class Walkthrough extends Component {
         };
     }
 
-
+    componentDidMount() {
+        console.log(this.props.auth);
+    }
 
     onSearch() {
 
@@ -253,7 +255,9 @@ class Walkthrough extends Component {
 }
 
 const mapStateToProps = state => {
-    return {};
+    return {
+        auth:state.auth
+    };
 };
 
 const mapDispatchToProps = dispatch => {
