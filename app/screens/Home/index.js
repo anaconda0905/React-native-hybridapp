@@ -1,15 +1,16 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import {AuthActions} from "@actions";
-import {bindActionCreators} from "redux";
-import {View, ScrollView} from "react-native";
-import {BaseStyle, BaseColor, Images} from "@config";
-import {Header, DatePicker, SafeAreaView, Icon, Text, Button, Image} from "@components";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { AuthActions } from "@actions";
+import { bindActionCreators } from "redux";
+import { View, ScrollView } from "react-native";
+import { BaseStyle, BaseColor, Images } from "@config";
+import { Header, DatePicker, SafeAreaView, Icon, Text, Button, Image } from "@components";
 import styles from "./styles";
-import {Dropdown} from 'react-native-material-dropdown';
-import {TextInput} from 'react-native-paper';
+import { Dropdown } from 'react-native-material-dropdown';
+import { TextInput } from 'react-native-paper';
 import messaging from "@react-native-firebase/messaging";
 import SendSMS from 'react-native-sms';
+import {FirebaseServices} from '../../services'
 
 class Home extends Component {
     constructor(props) {
@@ -21,11 +22,17 @@ class Home extends Component {
             success: {
                 id: true,
                 password: true
-            }
+            },
+            userToken: "",
         };
     }
 
     componentDidMount() {
+        messaging()
+            .getToken()
+            .then((token) => {
+                this.setState({ userToken: token });
+            });
         this.initNotification();
     }
 
@@ -37,17 +44,25 @@ class Home extends Component {
     }
 
     onSend() {
-        const {navigation} = this.props;
-        console.log(this.props.auth);
-        messaging()
-            .getToken()
-            .then((token) => {
-                console.log(token);
-            });
-
+        const { userToken } = this.state;
+        const msg = "Could I have a relationship with you?";
+        const body = {
+            registration_ids: userToken,
+            notification: {
+                title: 'Relationship Status',
+                body: msg,
+                icon: 'notification-icon',
+            },
+            data: {
+                type: 'chat',
+                msg: msg,
+                title: 'Relationship Status',
+            },
+        };
+        FirebaseServices.sendNotification(body);
     }
 
-    onSend1(){
+    onSend1() {
         SendSMS.send({
             //Message body
             body: 'Please follow me',
@@ -56,18 +71,18 @@ class Home extends Component {
             //An array of types that would trigger a "completed" response when using android
             successTypes: ['sent', 'queued']
         }, (completed, cancelled, error) => {
-            if(completed){
+            if (completed) {
                 console.log('SMS Sent Completed');
-            }else if(cancelled){
+            } else if (cancelled) {
                 console.log('SMS Sent Cancelled');
-            }else if(error){
+            } else if (error) {
                 console.log('Some error occured');
             }
         });
     }
 
     render() {
-        const {navigation} = this.props;
+        const { navigation } = this.props;
         let data = [{
             value: 'Married',
         }, {
@@ -76,7 +91,7 @@ class Home extends Component {
         return (
             <SafeAreaView
                 style={BaseStyle.safeAreaView}
-                forceInset={{top: "always"}}
+                forceInset={{ top: "always" }}
             >
                 <Header
                     title="Relationship Status"
@@ -92,14 +107,14 @@ class Home extends Component {
                 <ScrollView>
                     <View style={styles.contain}>
 
-                        <Image source={Images.trip2} style={styles.logo} resizeMode="contain"/>
+                        <Image source={Images.trip2} style={styles.logo} resizeMode="contain" />
 
                     </View>
 
                     <View style={styles.contain}>
                         <TextInput
-                            style={[BaseStyle.textInput, {marginTop: 15}]}
-                            onChangeText={text => this.setState({id: text})}
+                            style={[BaseStyle.textInput, { marginTop: 15 }]}
+                            onChangeText={text => this.setState({ id: text })}
                             onFocus={() => {
                                 this.setState({
                                     success: {
@@ -118,22 +133,22 @@ class Home extends Component {
                             value={this.state.id}
                             selectionColor={BaseColor.primaryColor}
                         />
-                        <View style={{width: "100%"}}>
+                        <View style={{ width: "100%" }}>
                             <Dropdown
                                 label='I AM ...'
                                 data={data}
                             />
                         </View>
 
-                        <View style={{width: "20%"}}>
+                        <View style={{ width: "20%" }}>
                             <Text style={BaseStyle.textInput2}>
                                 To
                             </Text>
                         </View>
 
                         <TextInput
-                            style={[BaseStyle.textInput, {marginTop: 10}]}
-                            onChangeText={text => this.setState({password: text})}
+                            style={[BaseStyle.textInput, { marginTop: 10 }]}
+                            onChangeText={text => this.setState({ password: text })}
                             onFocus={() => {
                                 this.setState({
                                     success: {
@@ -154,11 +169,11 @@ class Home extends Component {
                             selectionColor={BaseColor.primaryColor}
                         />
 
-                        <View style={{width: "100%",marginTop:20}}>
+                        <View style={{ width: "100%", marginTop: 20 }}>
                             <Button
                                 full
                                 loading={this.state.loading}
-                                style={{marginTop: 20, height: 46}}
+                                style={{ marginTop: 20, height: 46 }}
                                 onPress={() => {
                                     this.onSend();
                                 }}
@@ -168,7 +183,7 @@ class Home extends Component {
 
                             <Button
                                 full
-                                style={{marginTop: 20, height: 46}}
+                                style={{ marginTop: 20, height: 46 }}
                                 onPress={() => {
                                     this.onSend1();
                                 }}
