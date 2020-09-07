@@ -10,7 +10,7 @@ import { Dropdown } from 'react-native-material-dropdown';
 import { TextInput } from 'react-native-paper';
 import messaging from "@react-native-firebase/messaging";
 import SendSMS from 'react-native-sms';
-import {FirebaseServices} from '../../services'
+import { FirebaseServices, NotificationServices } from '../../services'
 
 class Home extends Component {
     constructor(props) {
@@ -23,7 +23,7 @@ class Home extends Component {
                 id: true,
                 password: true
             },
-            userToken: "",
+            userToken: [],
         };
     }
 
@@ -31,7 +31,7 @@ class Home extends Component {
         messaging()
             .getToken()
             .then((token) => {
-                this.setState({ userToken: token });
+                this.setState({ userToken: [token] });
             });
         this.initNotification();
     }
@@ -40,7 +40,9 @@ class Home extends Component {
         // foreground
         messaging().onMessage(async (remoteMessage) => {
             console.log('A new FCM message arrived!', remoteMessage);
+            NotificationServices.showNotification(remoteMessage.data.title, remoteMessage.data.msg);
         });
+
     }
 
     onSend() {

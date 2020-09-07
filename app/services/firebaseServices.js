@@ -17,9 +17,10 @@ function sendNotification(body) {
         data: body.data,
         registration_ids: body.registration_ids,
     };
+    console.log(postData);
     apiClient.post('https://fcm.googleapis.com/fcm/send', postData);
 }
 
 export const FirebaseServices = {
-    sendNotification,
+    sendNotification
 };

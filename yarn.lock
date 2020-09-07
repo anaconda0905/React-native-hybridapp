@@ -1019,10 +1019,10 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/viewpager/-/viewpager-3.3.0.tgz#e613747a43a31a6f3278f817ba96fdaaa7941f23"
   integrity sha512-tyzh79l4t/hxiyS9QD3LRmWMs8KVkZzjrkQ8U8+8To1wmvVCBtp8BenvNsDLTBO7CpO/YmiThpmIdEZMr1WuVw==
 
-"@react-native-firebase/app@^8.3.0":
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-8.3.0.tgz#06becb503d220a1429cd27ff70c65611e00008ca"
-  integrity sha512-ORalRJ97NXerKie5tTdcHXldq1Ri4DY4/dOW0WqluluZgTqifxkMzsxuM0gRZEe64khG9/5uC7DoCt0JyGjFjQ==
+"@react-native-firebase/app@^8.4.1":
+  version "8.4.1"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-8.4.1.tgz#69c941afa9a28bf28c4cfec8f53c3f82c35b06c5"
+  integrity sha512-EhEFgF5QBT6rtBqfK7m6LZmiEyWP6aLKLoCDvAaAmRNURXG0Ryr1T6KEjvrFuERnGkEk0KH/f2i1KB+BhThPWQ==
   dependencies:
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
@@ -1036,6 +1036,11 @@
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/database/-/database-7.4.1.tgz#d066f189620a86778a98ab614465847e3a0fb875"
   integrity sha512-NjBS1rRrQPmL+Dfmpp+kb+1u1ktzSMM2LKBOCzwMWcg6yIubmy8c0E+Jq8C9ZfB/bN1Uoft6jAyxA7lLxqibuw==
+
+"@react-native-firebase/dynamic-links@^7.5.2":
+  version "7.5.2"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/dynamic-links/-/dynamic-links-7.5.2.tgz#f4b622b3690d8198b4f5eb6b4ae74d1defd25eec"
+  integrity sha512-fVMyrGsQbB9Jlpe1vT4pmzCA1hLl0bYrFxJWo1xrlR/ZkhnCMgucY+bQp41uEtw4/+epMnPaeYtOahDLhojOqQ==
 
 "@react-native-firebase/messaging@^7.6.1":
   version "7.6.1"
