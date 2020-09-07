@@ -1,17 +1,18 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import {AuthActions} from "@actions";
-import {View, TouchableOpacity, ScrollView, LogBox, Alert, ToastAndroid} from "react-native";
-import {bindActionCreators} from "redux";
-import {SafeAreaView, Text, Button, Image, Icon} from "@components";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { AuthActions } from "@actions";
+import { View, TouchableOpacity, ScrollView, LogBox, I18nManager, Alert, ToastAndroid } from "react-native";
+import { bindActionCreators } from "redux";
+import { SafeAreaView, Text, Button, Image, Icon } from "@components";
 import styles from "./styles";
 import Swiper from "react-native-swiper";
-import {BaseColor, BaseStyle, Images} from "@config";
+import { BaseColor, BaseStyle, Images } from "@config";
 import * as Utils from "@utils";
-import {Rating, AirbnbRating} from 'react-native-ratings';
-import {Dropdown} from 'react-native-material-dropdown';
-import {TextInput} from 'react-native-paper';
+import { LangData } from "@data";
+import { Dropdown } from 'react-native-material-dropdown';
+import { TextInput } from 'react-native-paper';
 import database from '@react-native-firebase/database';
+
 
 class Walkthrough extends Component {
     constructor(props) {
@@ -21,21 +22,17 @@ class Walkthrough extends Component {
             scrollEnabled: true,
             cca2: 'US',
             input_text: '',
-            status: 'Result',
+            status: '',
             search_index: '',
             slide: [
-                {key: 1, image: Images.trip2},
+                { key: 1, image: Images.trip2 },
             ]
         };
     }
 
-    componentDidMount() {
-        console.log(this.props.auth);
-    }
-
     onSearch() {
 
-        let {search_index, input_text, status} = this.state;
+        let { search_index, input_text, status } = this.state;
         const emailRegex = /^\S+@\S+\.\S+$/;
         const phoneRegEx = /^[+\s.]?[0-9]{1,3}?[0-9]{3}?[-\s.]?[0-9]{2,3}[-/\s.]?[0-9]{4}$/;
         if (input_text == '') {
@@ -54,7 +51,7 @@ class Walkthrough extends Component {
 
                                 if (teams) {
                                     Object.keys(teams).forEach((key) => {
-                                        this.setState({status: teams[key].status});
+                                        this.setState({ status: teams[key].status });
                                     });
                                     ToastAndroid.show("Search result successfully retrieved!", ToastAndroid.LONG);
                                 }
@@ -79,7 +76,7 @@ class Walkthrough extends Component {
 
                                 if (teams) {
                                     Object.keys(teams).forEach((key) => {
-                                        this.setState({status: teams[key].status});
+                                        this.setState({ status: teams[key].status });
                                     });
 
                                     ToastAndroid.show("Search result successfully retrieved!", ToastAndroid.LONG);
@@ -104,7 +101,7 @@ class Walkthrough extends Component {
                             console.log(teams);
                             if (teams) {
                                 Object.keys(teams).forEach((key) => {
-                                    this.setState({status: teams[key].status});
+                                    this.setState({ status: teams[key].status });
                                 });
                                 ToastAndroid.show("Search result successfully retrieved!", ToastAndroid.LONG);
                             }
@@ -121,32 +118,20 @@ class Walkthrough extends Component {
         }
     }
 
-    /**
-     * @description Simple authentication without call any APIs
-     * @author Passion UI <passionui.com>
-     * @date 2019-08-03
-     */
-    authentication() {
-        this.setState(
-            {
-                loading: true
-            },
-            () => {
-                this.props.actions.authentication(true, response => {
-                    if (response.success) {
-                        this.props.navigation.navigate("Loading");
-                    } else {
-                        this.setState({
-                            loading: false
-                        });
-                    }
-                });
-            }
-        );
-    }
-
     render() {
-        const {navigation} = this.props;
+
+        let { lang } = {};
+        if (this.props.auth.user.lang == "Arabic") {
+            lang = LangData.arabic;
+            I18nManager.forceRTL(true);
+
+        }
+        else {
+            lang = LangData.en;
+            I18nManager.forceRTL(false);
+        }
+
+        const { navigation } = this.props;
 
         let data = [{
             value: 'Mobile number',
@@ -159,7 +144,7 @@ class Walkthrough extends Component {
         return (
             <SafeAreaView
                 style={BaseStyle.safeAreaView}
-                forceInset={{top: "always"}}
+                forceInset={{ top: "always" }}
             >
                 <ScrollView
                     style={styles.contain}
@@ -180,7 +165,7 @@ class Walkthrough extends Component {
                         </TouchableOpacity>
 
                         <TouchableOpacity onPress={() => navigation.navigate("SignUp")} style={styles.userplus}>
-                            <Icon name="user-plus" color={BaseColor.primaryColor} size={30} solid/>
+                            <Icon name="user-plus" color={BaseColor.primaryColor} size={30} solid />
                         </TouchableOpacity>
                     </View>
                     <View style={styles.wrapper}>
@@ -196,7 +181,7 @@ class Walkthrough extends Component {
                             {this.state.slide.map((item, index) => {
                                 return (
                                     <View style={styles.slide} key={item.key}>
-                                        <Image source={item.image} style={styles.img}/>
+                                        <Image source={item.image} style={styles.img} />
                                         <Text body1 style={styles.textSlide}>
                                             Relationship status
                                         </Text>
@@ -205,21 +190,21 @@ class Walkthrough extends Component {
                             })}
                         </Swiper>
                     </View>
-                    <View style={{width: "100%"}}>
+                    <View style={{ width: "100%" }}>
                         <Dropdown
-                            style={{marginLeft: 10}}
-                            label='Search By'
+                            style={{ marginLeft: 10 }}
+                            label={lang.searchby}
                             data={data}
                             onChangeText={(value, index) => {
-                                this.setState({search_index: index});
-                                this.setState({input_text: ''});
-                                this.setState({status: ''});
+                                this.setState({ search_index: index });
+                                this.setState({ input_text: '' });
+                                this.setState({ status: '' });
                             }}
                         />
 
                         <TextInput
                             style={BaseStyle.textInput_walk}
-                            onChangeText={text => this.setState({input_text: text})}
+                            onChangeText={text => this.setState({ input_text: text })}
                             autoCorrect={false}
                             placeholder=""
                             placeholderTextColor={BaseColor.grayColor}
@@ -229,22 +214,22 @@ class Walkthrough extends Component {
 
                         <Button
                             full
-                            style={{marginTop: 20}}
+                            style={{ marginTop: 20 }}
                             loading={this.state.loading}
                             onPress={() => this.onSearch()}
                         >
-                            Search
+                            {lang.search}
                         </Button>
                         <Text style={BaseStyle.textInput1}>
                             {this.state.status}
                         </Text>
                         <Button
                             full
-                            style={{marginTop: 20}}
+                            style={{ marginTop: 20 }}
                             loading={this.state.loading}
                             onPress={() => navigation.navigate("SignIn")}
                         >
-                            Sign In
+                            {lang.sigin}
                         </Button>
                     </View>
                 </ScrollView>
@@ -256,7 +241,7 @@ class Walkthrough extends Component {
 
 const mapStateToProps = state => {
     return {
-        auth:state.auth
+        auth: state.auth
     };
 };
 

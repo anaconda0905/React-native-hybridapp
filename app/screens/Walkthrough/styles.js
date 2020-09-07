@@ -29,8 +29,8 @@ export default StyleSheet.create({
     height: Utils.scaleWithPixel(150),
     borderRadius: Utils.scaleWithPixel(50) / 2
   },
-  userplus:{
-    alignItems: "flex-end", 
+  userplus: {
+    alignItems: "flex-end",
     justifyContent: "flex-end",
   },
   slide: {

@@ -14,6 +14,7 @@ import {LanguageData} from "@data";
 import {connect} from "react-redux";
 import {AuthActions} from "@actions";
 import {bindActionCreators} from "redux";
+import RNRestart from 'react-native-restart';
 
 class ChangeLanguage extends Component {
     constructor(props) {
@@ -120,7 +121,8 @@ class ChangeLanguage extends Component {
                                     });
                                     this.props.actions.changelanguage(this.state.country, response => {});
                                     navigation.navigate("Walkthrough");
-                                }, 500);
+                                    RNRestart.Restart();
+                                }, 100);
                             }
                         );
                     }}
