@@ -1,6 +1,6 @@
-import React, {Component} from "react";
-import {View, ScrollView, Alert, TextInput, Switch} from "react-native";
-import {BaseStyle, BaseColor} from "@config";
+import React, { Component } from "react";
+import { View, ScrollView, Alert, TextInput, Switch } from "react-native";
+import { BaseStyle, BaseColor } from "@config";
 import styles from "./styles";
 import {
     Header,
@@ -14,7 +14,7 @@ import {
 import * as Utils from "@utils";
 import auth from "@react-native-firebase/auth";
 import database from "@react-native-firebase/database";
-import FlashMessage, {showMessage} from 'react-native-flash-message';
+import FlashMessage, { showMessage } from 'react-native-flash-message';
 
 export default class SignUp extends Component {
     constructor(props) {
@@ -43,8 +43,8 @@ export default class SignUp extends Component {
 
     onSignUp() {
 
-        const {navigation} = this.props;
-        let {first_name, last_name, mobile_number, snapchat, email, password, success, reminders} = this.state;
+        const { navigation } = this.props;
+        let { first_name, last_name, mobile_number, snapchat, email, password, success, reminders } = this.state;
 
         if (first_name == "" || last_name == "" || email == "" || snapchat == "" || password == "" || mobile_number == "" || reminders == false) {
             this.setState({
@@ -73,7 +73,7 @@ export default class SignUp extends Component {
                                 const uid = auth().currentUser.uid;
 
                                 database()
-                                    .ref('/users/'+uid)
+                                    .ref('/users/' + uid)
                                     .set({
                                         email: email,
                                         fName: first_name,
@@ -138,17 +138,17 @@ export default class SignUp extends Component {
      * @description Call when reminder option switch on/off
      */
     toggleSwitch = value => {
-        this.setState({reminders: value});
+        this.setState({ reminders: value });
     };
 
     render() {
-        const {navigation} = this.props;
-        let {loading, first_name, last_name, mobile_number, snapchat, email, password, success} = this.state;
+        const { navigation } = this.props;
+        let { loading, first_name, last_name, mobile_number, snapchat, email, password, success } = this.state;
         return (
             <>
                 <SafeAreaView
                     style={BaseStyle.safeAreaView}
-                    forceInset={{top: "always"}}
+                    forceInset={{ top: "always" }}
                 >
                     <Header
                         title="Sign Up"
@@ -170,8 +170,8 @@ export default class SignUp extends Component {
                     <ScrollView>
                         <View style={styles.contain}>
                             <TextInput
-                                style={[BaseStyle.textInput, {marginTop: 65}]}
-                                onChangeText={text => this.setState({first_name: text})}
+                                style={[BaseStyle.textInput, { marginTop: 65 }]}
+                                onChangeText={text => this.setState({ first_name: text })}
                                 autoCorrect={false}
                                 placeholder="First Name"
                                 placeholderTextColor={
@@ -180,8 +180,8 @@ export default class SignUp extends Component {
                                 value={first_name}
                             />
                             <TextInput
-                                style={[BaseStyle.textInput, {marginTop: 10}]}
-                                onChangeText={text => this.setState({last_name: text})}
+                                style={[BaseStyle.textInput, { marginTop: 10 }]}
+                                onChangeText={text => this.setState({ last_name: text })}
                                 autoCorrect={false}
                                 placeholder="Last Name"
                                 placeholderTextColor={
@@ -189,20 +189,23 @@ export default class SignUp extends Component {
                                 }
                                 value={last_name}
                             />
+                            <View style={styles.containPhone}>
+                                <Text style={BaseStyle.label}>+966</Text>
+                                <TextInput
+                                    style={[BaseStyle.textInputPhone, { marginTop: 10 }]}
+                                    onChangeText={text => this.setState({ mobile_number: text })}
+                                    autoCorrect={false}
+                                    placeholder="Mobile Number"
+                                    keyboardType="phone-pad"
+                                    placeholderTextColor={
+                                        success.mobile_number ? BaseColor.grayColor : BaseColor.primaryColor
+                                    }
+                                    value={mobile_number}
+                                />
+                            </View>
                             <TextInput
-                                style={[BaseStyle.textInput, {marginTop: 10}]}
-                                onChangeText={text => this.setState({mobile_number: text})}
-                                autoCorrect={false}
-                                placeholder="Mobile Number"
-                                keyboardType="phone-pad"
-                                placeholderTextColor={
-                                    success.mobile_number ? BaseColor.grayColor : BaseColor.primaryColor
-                                }
-                                value={mobile_number}
-                            />
-                            <TextInput
-                                style={[BaseStyle.textInput, {marginTop: 10}]}
-                                onChangeText={text => this.setState({snapchat: text})}
+                                style={[BaseStyle.textInput, { marginTop: 10 }]}
+                                onChangeText={text => this.setState({ snapchat: text })}
                                 autoCorrect={false}
                                 placeholder="snapchat"
                                 placeholderTextColor={
@@ -211,8 +214,8 @@ export default class SignUp extends Component {
                                 value={snapchat}
                             />
                             <TextInput
-                                style={[BaseStyle.textInput, {marginTop: 10}]}
-                                onChangeText={text => this.setState({email: text})}
+                                style={[BaseStyle.textInput, { marginTop: 10 }]}
+                                onChangeText={text => this.setState({ email: text })}
                                 autoCorrect={false}
                                 placeholder="Email"
                                 keyboardType="email-address"
@@ -222,8 +225,8 @@ export default class SignUp extends Component {
                                 value={email}
                             />
                             <TextInput
-                                style={[BaseStyle.textInput, {marginTop: 10}]}
-                                onChangeText={text => this.setState({password: text})}
+                                style={[BaseStyle.textInput, { marginTop: 10 }]}
+                                onChangeText={text => this.setState({ password: text })}
                                 autoCorrect={false}
                                 placeholder="password"
                                 placeholderTextColor={
@@ -238,12 +241,12 @@ export default class SignUp extends Component {
                                     onValueChange={this.toggleSwitch}
                                     value={this.state.reminders}
                                 />
-                                <Text style={{color: BaseColor.grayColor}}>I agree to the Terms and Conditions</Text>
+                                <Text style={{ color: BaseColor.grayColor }}>I agree to the Terms and Conditions</Text>
                             </View>
-                            <View style={{width: "100%"}}>
+                            <View style={{ width: "100%" }}>
                                 <Button
                                     full
-                                    style={{marginTop: 20}}
+                                    style={{ marginTop: 20 }}
                                     loading={loading}
                                     onPress={() => this.onSignUp()}
                                 >
@@ -253,7 +256,7 @@ export default class SignUp extends Component {
                         </View>
                     </ScrollView>
                 </SafeAreaView>
-                <FlashMessage position="top"/>
+                <FlashMessage position="top" />
             </>
         );
     }

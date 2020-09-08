@@ -7,6 +7,7 @@ import { BaseStyle, BaseColor, Images } from "@config";
 import { Image, Header, SafeAreaView, Icon, Text, Button } from "@components";
 import database from "@react-native-firebase/database";
 import { FirebaseServices, NotificationServices } from '../../services'
+import * as Utils from "@utils";
 import styles from "./styles";
 
 class ProfileEdit extends Component {
@@ -22,7 +23,7 @@ class ProfileEdit extends Component {
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
     FirebaseServices.getProfileByUid(this.props.auth.login.uid, (info) => {
       this.setState({
         fName: info.fName,
@@ -31,16 +32,15 @@ class ProfileEdit extends Component {
         phoneNum: info.mobileNumber,
         snapChat: info.snapChat
       });
-  });
+    });
   }
 
   onConfirm() {
     const { fName, lName, phoneNum, snapChat } = this.state;
     const { navigation } = this.props;
-    const phoneRegEx = /^[+\s.]?[0-9]{1,3}?[0-9]{3}?[-\s.]?[0-9]{2,3}[-/\s.]?[0-9]{4}$/;
     const uuid = this.props.auth.login.uid;
 
-    if (uuid && phoneRegEx.test(phoneNum)) {
+    if (uuid && Utils.phoneRegEx.test(phoneNum)) {
       this.setState({
         loading: true
       })
@@ -60,7 +60,7 @@ class ProfileEdit extends Component {
           navigation.navigate('Home');
         });
     } else {
-      ToastAndroid.show("Profile Updated successfully!", ToastAndroid.LONG);
+      ToastAndroid.show("Please input correctly!", ToastAndroid.LONG);
     }
   }
 
@@ -125,7 +125,7 @@ class ProfileEdit extends Component {
               style={BaseStyle.textInput}
               onChangeText={text => this.setState({ email: text })}
               autoCorrect={false}
-              placeholder="Input Name"
+              placeholder="Input email"
               editable={false}
               placeholderTextColor={BaseColor.grayColor}
               value={this.state.email}
@@ -135,15 +135,18 @@ class ProfileEdit extends Component {
                 Mobile Number
               </Text>
             </View>
-            <TextInput
-              style={BaseStyle.textInput}
-              onChangeText={text => this.setState({ phoneNum: text })}
-              autoCorrect={false}
-              placeholder="Input Mobile Number"
-              placeholderTextColor={BaseColor.grayColor}
-              value={this.state.phoneNum}
-              selectionColor={BaseColor.primaryColor}
-            />
+            <View style={styles.containPhone}>
+              <Text style={BaseStyle.label}>+966</Text>
+              <TextInput
+                style={BaseStyle.textInputPhone}
+                onChangeText={text => this.setState({ phoneNum: text })}
+                autoCorrect={false}
+                placeholder="Input Mobile Number"
+                placeholderTextColor={BaseColor.grayColor}
+                value={this.state.phoneNum}
+                selectionColor={BaseColor.primaryColor}
+              />
+            </View>
             <View style={styles.contentTitle}>
               <Text headline semibold>
                 Snap Chat

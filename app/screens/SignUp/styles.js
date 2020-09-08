@@ -8,6 +8,14 @@ export default StyleSheet.create({
     padding: 20,
     width: "100%"
   },
+  containPhone: {
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    marginVertical: 10,
+    alignItems: "center",
+    width: "100%",
+  },
   textInput: {
     height: 46,
     backgroundColor: BaseColor.fieldColor,
