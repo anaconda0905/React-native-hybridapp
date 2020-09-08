@@ -31,7 +31,6 @@ class Setting extends Component {
         this.setState({ loading: true });
         this.props.actions.authentication(false, response => { });
         setTimeout(() => {
-            console.log("here");
             navigation.navigate("Loading");
         }, 1000);
         

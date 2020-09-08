@@ -43,17 +43,28 @@ export const BaseStyle = StyleSheet.create({
         width: "100%",
         justifyContent: "center"
     },
+    textInputStatus: {
+        height: 46,
+        marginTop: 5,
+        textAlign: "center",
+        fontSize: 16,
+        backgroundColor: BaseColor.fieldColor,
+        borderRadius: 5,
+        padding: 10,
+        width: "100%",
+        justifyContent: "center"
+    },
     textInputPhone: {
         height: 46,
         marginTop: 5,
         backgroundColor: BaseColor.fieldColor,
         borderRadius: 5,
-        width: "90%",
+        width: "85%",
         justifyContent: "center"
     },
     label: {
         fontSize: 16,
-        width: "10%",
+        width: "15%",
     },
     
     textInput_walk: {

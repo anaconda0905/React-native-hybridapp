@@ -41,11 +41,6 @@ class Home extends Component {
                     FirebaseServices.updateProfileTokenByUid(this.props.auth.login.uid, token);
                 });
             this.initNotification();
-            FirebaseServices.getProfileByUid(this.props.auth.login.uid, (info) => {
-                this.setState({
-                    phoneNum1: info.mobileNumber
-                });
-            });
         }
     }
 
@@ -143,9 +138,7 @@ class Home extends Component {
                     />
                     <ScrollView>
                         <View style={styles.contain}>
-
                             <Image source={Images.trip2} style={styles.logo} resizeMode="contain" />
-
                         </View>
 
                         <View style={styles.contain}>
@@ -169,7 +162,6 @@ class Home extends Component {
                                             ? BaseColor.grayColor
                                             : BaseColor.primaryColor
                                     }
-                                    editable={false}
                                     value={this.state.phoneNum1}
                                     selectionColor={BaseColor.primaryColor}
                                 />

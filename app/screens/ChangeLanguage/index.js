@@ -3,12 +3,12 @@ import {
     View,
     FlatList,
     ActivityIndicator,
-    TouchableOpacity
+    TouchableOpacity,
+    I18nManager
 } from "react-native";
 import {BaseStyle, BaseColor} from "@config";
 import {Header, SafeAreaView, Icon, Text} from "@components";
 import styles from "./styles";
-
 // Load sample language data list
 import {LanguageData} from "@data";
 import {connect} from "react-redux";
@@ -45,6 +45,7 @@ class ChangeLanguage extends Component {
             })
         });
     }
+
     /**
      * @description Called when setting language is selected
      * @author Passion UI <passionui.com>
@@ -121,7 +122,7 @@ class ChangeLanguage extends Component {
                                     });
                                     this.props.actions.changelanguage(this.state.country, response => {});
                                     navigation.navigate("Walkthrough");
-                                    RNRestart.Restart();
+                                    // RNRestart.Restart();
                                 }, 100);
                             }
                         );

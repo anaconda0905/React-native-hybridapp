@@ -40,16 +40,17 @@ class ProfileEdit extends Component {
     const { navigation } = this.props;
     const uuid = this.props.auth.login.uid;
 
-    if (uuid && Utils.phoneRegEx.test(phoneNum)) {
+    if (uuid && Utils.phoneRegEx.test(phoneNum)){
+     
       this.setState({
         loading: true
-      })
+      });
       database()
         .ref('/users/' + uuid)
         .update({
           fName: fName,
           lName: lName,
-          mobileNumber: phoneNum,
+          mobileNumber: Utils.formatPhoneNumber(phoneNum),
           snapChat: snapChat,
         })
         .then(() => {
@@ -59,6 +60,8 @@ class ProfileEdit extends Component {
           ToastAndroid.show("Profile Updated successfully!", ToastAndroid.LONG);
           navigation.navigate('Home');
         });
+    } else if(Utils.phoneRegEx.test(phoneNum) == false){
+      ToastAndroid.show("Mobile Number is invalid", ToastAndroid.LONG);
     } else {
       ToastAndroid.show("Please input correctly!", ToastAndroid.LONG);
     }

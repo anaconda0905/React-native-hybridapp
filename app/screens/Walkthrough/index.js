@@ -33,15 +33,13 @@ class Walkthrough extends Component {
     onSearch() {
 
         let { search_index, input_text, status } = this.state;
-        const emailRegex = /^\S+@\S+\.\S+$/;
-        const phoneRegEx = /^[+\s.]?[0-9]{1,3}?[0-9]{3}?[-\s.]?[0-9]{2,3}[-/\s.]?[0-9]{4}$/;
         if (input_text == '') {
             Alert.alert('Search failed', 'Please input correctly.');
         }
         else {
             switch (search_index) {
                 case 0:
-                    if (phoneRegEx.test(input_text)) {
+                    if (Utils.phoneRegEx.test(input_text)) {
                         database()
                             .ref('users')
                             .orderByChild('mobileNumber')
@@ -66,7 +64,7 @@ class Walkthrough extends Component {
                     }
                     break;
                 case 1:
-                    if (emailRegex.test(input_text)) {
+                    if (Utils.emailRegex.test(input_text)) {
                         database()
                             .ref('users')
                             .orderByChild('email')
@@ -118,13 +116,16 @@ class Walkthrough extends Component {
         }
     }
 
+    componentDidMount(){
+        console.log(this.props.auth);
+    }
+
     render() {
 
         let { lang } = {};
         if (this.props.auth.user.lang == "Arabic") {
             lang = LangData.arabic;
             I18nManager.forceRTL(true);
-
         }
         else {
             lang = LangData.en;
@@ -220,7 +221,7 @@ class Walkthrough extends Component {
                         >
                             {lang.search}
                         </Button>
-                        <Text style={BaseStyle.textInput}>
+                        <Text style={BaseStyle.textInputStatus}>
                             {this.state.status}
                         </Text>
                         <Button

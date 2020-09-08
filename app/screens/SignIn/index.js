@@ -144,7 +144,7 @@ class SignIn extends Component {
                         </View>
                         <View style={{ width: "100%" }}>
                             <TextInput
-                                style={BaseStyle.textInput}
+                                style={BaseStyle.textInput_walk}
                                 onChangeText={text => this.setState({ id: text })}
                                 autoCorrect={false}
                                 placeholder="Email"
@@ -153,7 +153,7 @@ class SignIn extends Component {
                                 selectionColor={BaseColor.primaryColor}
                             />
                             <TextInput
-                                style={BaseStyle.textInput}
+                                style={BaseStyle.textInput_walk}
                                 onChangeText={text => this.setState({ password: text })}
                                 secureTextEntry={true}
                                 autoCorrect={false}

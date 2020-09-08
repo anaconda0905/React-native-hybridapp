@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { View, ScrollView, Alert, TextInput, Switch } from "react-native";
+import { View, ScrollView, Alert, Switch } from "react-native";
+import { TextInput } from 'react-native-paper';
 import { BaseStyle, BaseColor } from "@config";
 import styles from "./styles";
 import {
@@ -59,6 +60,8 @@ export default class SignUp extends Component {
                     reminders: reminders != false ? true : false
                 }
             });
+        } else if(Utils.formatPhoneNumber(mobile_number) == null){
+            console.log("here");
         } else {
             this.setState(
                 {
@@ -170,7 +173,7 @@ export default class SignUp extends Component {
                     <ScrollView>
                         <View style={styles.contain}>
                             <TextInput
-                                style={[BaseStyle.textInput, { marginTop: 65 }]}
+                                style={[BaseStyle.textInput_walk, { marginTop: 25 }]}
                                 onChangeText={text => this.setState({ first_name: text })}
                                 autoCorrect={false}
                                 placeholder="First Name"
@@ -180,7 +183,7 @@ export default class SignUp extends Component {
                                 value={first_name}
                             />
                             <TextInput
-                                style={[BaseStyle.textInput, { marginTop: 10 }]}
+                                style={[BaseStyle.textInput_walk, { marginTop: 10 }]}
                                 onChangeText={text => this.setState({ last_name: text })}
                                 autoCorrect={false}
                                 placeholder="Last Name"
@@ -204,7 +207,7 @@ export default class SignUp extends Component {
                                 />
                             </View>
                             <TextInput
-                                style={[BaseStyle.textInput, { marginTop: 10 }]}
+                                style={[BaseStyle.textInput_walk, { marginTop: 10 }]}
                                 onChangeText={text => this.setState({ snapchat: text })}
                                 autoCorrect={false}
                                 placeholder="snapchat"
@@ -214,7 +217,7 @@ export default class SignUp extends Component {
                                 value={snapchat}
                             />
                             <TextInput
-                                style={[BaseStyle.textInput, { marginTop: 10 }]}
+                                style={[BaseStyle.textInput_walk, { marginTop: 10 }]}
                                 onChangeText={text => this.setState({ email: text })}
                                 autoCorrect={false}
                                 placeholder="Email"
@@ -225,7 +228,7 @@ export default class SignUp extends Component {
                                 value={email}
                             />
                             <TextInput
-                                style={[BaseStyle.textInput, { marginTop: 10 }]}
+                                style={[BaseStyle.textInput_walk, { marginTop: 10 }]}
                                 onChangeText={text => this.setState({ password: text })}
                                 autoCorrect={false}
                                 placeholder="password"
