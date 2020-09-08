@@ -27,17 +27,14 @@ class Setting extends Component {
      * @date 2019-08-03
      */
     onLogOut() {
-        const {navigation} = this.props;
-
-        this.setState(
-            {
-                loading: true
-            },
-            () => {
-                this.props.actions.authentication(false, response => {});
-                navigation.navigate("Loading");
-            }
-        );
+        const { navigation } = this.props;
+        this.setState({ loading: true });
+        this.props.actions.authentication(false, response => { });
+        setTimeout(() => {
+            console.log("here");
+            navigation.navigate("Loading");
+        }, 1000);
+        
     }
 
     render() {

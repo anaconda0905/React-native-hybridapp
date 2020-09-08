@@ -11,6 +11,7 @@ import {
     ProfileDetail,
     ProfilePerformance
 } from "@components";
+import * as Utils from "@utils";
 import auth from "@react-native-firebase/auth";
 import database from "@react-native-firebase/database";
 import FlashMessage, {showMessage} from 'react-native-flash-message';
@@ -64,9 +65,7 @@ export default class SignUp extends Component {
                     loading: true
                 },
                 () => {
-                    const emailRegex = /^\S+@\S+\.\S+$/;
-                    const phoneRegEx = /^[+\s.]?[0-9]{1,3}?[0-9]{3}?[-\s.]?[0-9]{2,3}[-/\s.]?[0-9]{4}$/;
-                    if (phoneRegEx.test(mobile_number) && emailRegex.test(email)) {
+                    if (Utils.phoneRegEx.test(mobile_number) && Utils.emailRegex.test(email)) {
                         auth()
                             .createUserWithEmailAndPassword(email, password)
                             .then(() => {

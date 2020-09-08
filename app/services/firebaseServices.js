@@ -1,5 +1,7 @@
 import axios from 'axios';
 import { BackendConfig } from '@config';
+import database from '@react-native-firebase/database';
+import { useCallback } from 'react';
 
 const apiClient = axios.create({
     baseURL: BackendConfig.FCM_BASE_URL,
@@ -21,6 +23,27 @@ function sendNotification(body) {
     apiClient.post('https://fcm.googleapis.com/fcm/send', postData);
 }
 
+async function getProfileByUid(uid, callback) {
+    database()
+        .ref('/users/'+uid)
+        .once('value')
+        .then(snapshot => {
+            const userInfo = snapshot.val();
+            callback(userInfo);
+        });
+}
+
+async function updateProfileTokenByUid(uid, token) {
+    database()
+        .ref('/users/'+uid)
+        .update({
+            toekn: token,
+        })
+        .then(() => {});
+}
+
 export const FirebaseServices = {
-    sendNotification
+    sendNotification,
+    getProfileByUid,
+    updateProfileTokenByUid
 };

@@ -1,5 +1,5 @@
-import {StyleSheet} from "react-native";
-import {BaseColor} from "./color";
+import { StyleSheet } from "react-native";
+import { BaseColor } from "./color";
 
 /**
  * Common basic style defines
@@ -43,6 +43,19 @@ export const BaseStyle = StyleSheet.create({
         width: "100%",
         justifyContent: "center"
     },
+    textInputPhone: {
+        height: 46,
+        marginTop: 5,
+        backgroundColor: BaseColor.fieldColor,
+        borderRadius: 5,
+        width: "90%",
+        justifyContent: "center"
+    },
+    label: {
+        fontSize: 16,
+        width: "10%",
+    },
+    
     textInput_walk: {
         height: 46,
         backgroundColor: BaseColor.whiteColor,

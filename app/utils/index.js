@@ -72,6 +72,19 @@ export const scrollEnabled = (contentWidth, contentHeight) => {
   return contentHeight > Dimensions.get("window").height - heightHeader();
 };
 
+export const emailRegex = /^\S+@\S+\.\S+$/;
+export const phoneRegEx = /^[(]?[0-9]{2,3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+
+export function formatPhoneNumber(phoneNumberString) {
+  var cleaned = ('' + phoneNumberString).replace(/\D/g, '')
+  var match = cleaned.match(/^(1|)?(\d{2,3})(\d{3})(\d{4})$/)
+  if (match) {
+    var intlCode = '+966 ';
+    return [intlCode, '(', match[2], ') ', match[3], '-', match[4]].join('')
+  }
+  return null
+}
+
 // Animation navigation between screen react-navigation
 export function fromLeft(duration = 300) {
   return {

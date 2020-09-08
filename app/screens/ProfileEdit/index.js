@@ -1,19 +1,67 @@
 import React, { Component } from "react";
-import { View, ScrollView, TextInput } from "react-native";
+import { connect } from "react-redux";
+import { AuthActions } from "@actions";
+import { bindActionCreators } from "redux";
+import { View, ScrollView, TextInput, Alert, ToastAndroid } from "react-native";
 import { BaseStyle, BaseColor, Images } from "@config";
 import { Image, Header, SafeAreaView, Icon, Text, Button } from "@components";
+import database from "@react-native-firebase/database";
+import { FirebaseServices, NotificationServices } from '../../services'
 import styles from "./styles";
 
-export default class ProfileEdit extends Component {
+class ProfileEdit extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: 2,
-      name: 'jin long',
-      email: 'conda95@outlook.com',
-      address: 'd',
+      fName: "",
+      lName: '',
+      email: '',
+      phoneNum: '',
+      snapChat: '',
       loading: false
     };
+  }
+
+  componentDidMount(){
+    FirebaseServices.getProfileByUid(this.props.auth.login.uid, (info) => {
+      this.setState({
+        fName: info.fName,
+        lName: info.lName,
+        email: info.email,
+        phoneNum: info.mobileNumber,
+        snapChat: info.snapChat
+      });
+  });
+  }
+
+  onConfirm() {
+    const { fName, lName, phoneNum, snapChat } = this.state;
+    const { navigation } = this.props;
+    const phoneRegEx = /^[+\s.]?[0-9]{1,3}?[0-9]{3}?[-\s.]?[0-9]{2,3}[-/\s.]?[0-9]{4}$/;
+    const uuid = this.props.auth.login.uid;
+
+    if (uuid && phoneRegEx.test(phoneNum)) {
+      this.setState({
+        loading: true
+      })
+      database()
+        .ref('/users/' + uuid)
+        .update({
+          fName: fName,
+          lName: lName,
+          mobileNumber: phoneNum,
+          snapChat: snapChat,
+        })
+        .then(() => {
+          this.setState({
+            loading: false
+          })
+          ToastAndroid.show("Profile Updated successfully!", ToastAndroid.LONG);
+          navigation.navigate('Home');
+        });
+    } else {
+      ToastAndroid.show("Profile Updated successfully!", ToastAndroid.LONG);
+    }
   }
 
   render() {
@@ -37,36 +85,35 @@ export default class ProfileEdit extends Component {
           onPressLeft={() => {
             navigation.goBack();
           }}
-          onPressRight={() => {}}
         />
         <ScrollView>
           <View style={styles.contain}>
             <View style={styles.contentTitle}>
               <Text headline semibold>
-                Account
+                First Name
               </Text>
             </View>
             <TextInput
               style={BaseStyle.textInput}
-              onChangeText={text => this.setState({ id: text })}
+              onChangeText={text => this.setState({ fName: text })}
               autoCorrect={false}
-              placeholder="Input ID"
+              placeholder="Input First Name"
               placeholderTextColor={BaseColor.grayColor}
-              value={this.state.id}
+              value={this.state.fName}
               selectionColor={BaseColor.primaryColor}
             />
             <View style={styles.contentTitle}>
               <Text headline semibold>
-                Name
+                Last Name
               </Text>
             </View>
             <TextInput
               style={BaseStyle.textInput}
-              onChangeText={text => this.setState({ name: text })}
+              onChangeText={text => this.setState({ lName: text })}
               autoCorrect={false}
-              placeholder="Input Name"
+              placeholder="Input Last Name"
               placeholderTextColor={BaseColor.grayColor}
-              value={this.state.name}
+              value={this.state.lName}
               selectionColor={BaseColor.primaryColor}
             />
             <View style={styles.contentTitle}>
@@ -79,21 +126,36 @@ export default class ProfileEdit extends Component {
               onChangeText={text => this.setState({ email: text })}
               autoCorrect={false}
               placeholder="Input Name"
+              editable={false}
               placeholderTextColor={BaseColor.grayColor}
               value={this.state.email}
             />
             <View style={styles.contentTitle}>
               <Text headline semibold>
-                Address
+                Mobile Number
               </Text>
             </View>
             <TextInput
               style={BaseStyle.textInput}
-              onChangeText={text => this.setState({ address: text })}
+              onChangeText={text => this.setState({ phoneNum: text })}
               autoCorrect={false}
-              placeholder="Input Address"
+              placeholder="Input Mobile Number"
               placeholderTextColor={BaseColor.grayColor}
-              value={this.state.address}
+              value={this.state.phoneNum}
+              selectionColor={BaseColor.primaryColor}
+            />
+            <View style={styles.contentTitle}>
+              <Text headline semibold>
+                Snap Chat
+              </Text>
+            </View>
+            <TextInput
+              style={BaseStyle.textInput}
+              onChangeText={text => this.setState({ snapChat: text })}
+              autoCorrect={false}
+              placeholder="Input Snap Chat"
+              placeholderTextColor={BaseColor.grayColor}
+              value={this.state.snapChat}
               selectionColor={BaseColor.primaryColor}
             />
           </View>
@@ -103,16 +165,7 @@ export default class ProfileEdit extends Component {
             loading={this.state.loading}
             full
             onPress={() => {
-              this.setState(
-                {
-                  loading: true
-                },
-                () => {
-                  setTimeout(() => {
-                    navigation.goBack();
-                  }, 500);
-                }
-              );
+              this.onConfirm();
             }}
           >
             Confirm
@@ -122,3 +175,17 @@ export default class ProfileEdit extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => {
+  return {
+    auth: state.auth
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    actions: bindActionCreators(AuthActions, dispatch)
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProfileEdit);

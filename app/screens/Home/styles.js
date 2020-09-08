@@ -1,6 +1,6 @@
 import React from "react";
-import {StyleSheet} from "react-native";
-import {BaseColor} from "@config";
+import { StyleSheet } from "react-native";
+import { BaseColor } from "@config";
 import * as Utils from "@utils";
 
 export default StyleSheet.create({
@@ -12,15 +12,23 @@ export default StyleSheet.create({
         padding: 10,
         width: "100%"
     },
+    containPhone: {
+        flexDirection: 'row',
+        justifyContent: 'flex-start',
+        alignItems: 'center',
+        marginVertical: 10,
+        alignItems: "center",
+        width: "100%",
+    },
     contain: {
         alignItems: "center",
         padding: 20,
         width: "100%"
     },
     logo: {
-        width: Utils.scaleWithPixel(150),
-        height: Utils.scaleWithPixel(150),
-        borderRadius: Utils.scaleWithPixel(50) / 2,
+        width: Utils.scaleWithPixel(120),
+        height: Utils.scaleWithPixel(120),
+        borderRadius: Utils.scaleWithPixel(40) / 2,
         marginTop: 10,
     },
 });

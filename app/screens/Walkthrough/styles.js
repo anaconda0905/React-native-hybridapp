@@ -25,9 +25,9 @@ export default StyleSheet.create({
     marginTop: 25
   },
   img: {
-    width: Utils.scaleWithPixel(150),
-    height: Utils.scaleWithPixel(150),
-    borderRadius: Utils.scaleWithPixel(50) / 2
+    width: Utils.scaleWithPixel(120),
+    height: Utils.scaleWithPixel(120),
+    borderRadius: Utils.scaleWithPixel(40) / 2
   },
   userplus: {
     alignItems: "flex-end",

@@ -1,17 +1,17 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import {AuthActions} from "@actions";
-import {bindActionCreators} from "redux";
-import {View, ScrollView, TouchableOpacity, CameraRoll, ToastAndroid} from "react-native";
-import {BaseStyle, BaseColor, Images} from "@config";
-import {Header, SafeAreaView, Icon, Text, Button, Image} from "@components";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { AuthActions } from "@actions";
+import { bindActionCreators } from "redux";
+import { View, ScrollView, TouchableOpacity, CameraRoll, ToastAndroid } from "react-native";
+import { BaseStyle, BaseColor, Images } from "@config";
+import { Header, SafeAreaView, Icon, Text, Button, Image } from "@components";
 import styles from "./styles";
-import {TextInput} from 'react-native-paper';
+import { TextInput } from 'react-native-paper';
 import Swiper from "react-native-swiper";
 import * as Utils from "@utils";
 import database from '@react-native-firebase/database';
 import auth from '@react-native-firebase/auth';
-import FlashMessage, {showMessage} from 'react-native-flash-message';
+import FlashMessage, { showMessage } from 'react-native-flash-message';
 
 
 class SignIn extends Component {
@@ -26,15 +26,15 @@ class SignIn extends Component {
                 password: true
             },
             slide: [
-                {key: 1, image: Images.trip2},
+                { key: 1, image: Images.trip2 },
             ]
         };
     }
 
     onLogin() {
 
-        const {id, password, success} = this.state;
-        const {navigation} = this.props;
+        const { id, password, success } = this.state;
+        const { navigation } = this.props;
         if (id == "" || password == "") {
             this.setState({
                 success: {
@@ -61,16 +61,16 @@ class SignIn extends Component {
                                 type: 'success',
                                 icon: 'auto',
                             });
+                            this.props.actions.authentication(true, uid, response => { });
                             setTimeout(() => {
                                 navigation.navigate("Home");
-                                this.props.actions.authentication(true, uid, response => {});
-                            }, 2000);
+                            }, 1000);
                         })
                         .catch(error => {
                             console.log("error");
                             showMessage({
                                 message: 'Please input email and password correctly!',
-                                type: 'fail',
+                                type: 'danger',
                                 icon: 'auto',
                             });
                         });
@@ -79,20 +79,20 @@ class SignIn extends Component {
                         this.setState({
                             loading: false
                         });
-                    }, 2000);
+                    }, 1000);
                 }
             );
         }
     }
 
     render() {
-        const {navigation} = this.props;
+        const { navigation } = this.props;
         let base64Logo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAA..';
         return (
             <>
                 <SafeAreaView
                     style={BaseStyle.safeAreaView}
-                    forceInset={{top: "always"}}
+                    forceInset={{ top: "always" }}
                 >
                     <Header
                         title="LogIn"
@@ -132,7 +132,7 @@ class SignIn extends Component {
                                     {this.state.slide.map((item, index) => {
                                         return (
                                             <View style={styles.slide} key={item.key}>
-                                                <Image source={item.image} style={styles.img}/>
+                                                <Image source={item.image} style={styles.img} />
                                                 <Text body1 style={styles.textSlide}>
                                                     Relationship status
                                                 </Text>
@@ -142,10 +142,10 @@ class SignIn extends Component {
                                 </Swiper>
                             </View>
                         </View>
-                        <View style={{width: "100%"}}>
+                        <View style={{ width: "100%" }}>
                             <TextInput
                                 style={BaseStyle.textInput}
-                                onChangeText={text => this.setState({id: text})}
+                                onChangeText={text => this.setState({ id: text })}
                                 autoCorrect={false}
                                 placeholder="Email"
                                 placeholderTextColor={BaseColor.grayColor}
@@ -154,7 +154,7 @@ class SignIn extends Component {
                             />
                             <TextInput
                                 style={BaseStyle.textInput}
-                                onChangeText={text => this.setState({password: text})}
+                                onChangeText={text => this.setState({ password: text })}
                                 secureTextEntry={true}
                                 autoCorrect={false}
                                 placeholder="Password"
@@ -165,7 +165,7 @@ class SignIn extends Component {
                             <Button
                                 full
                                 loading={this.state.loading}
-                                style={{marginTop: 30}}
+                                style={{ marginTop: 30 }}
                                 onPress={() => {
                                     this.onLogin();
                                 }}
@@ -175,7 +175,7 @@ class SignIn extends Component {
                         </View>
                     </ScrollView>
                 </SafeAreaView>
-                <FlashMessage position="top"/>
+                <FlashMessage position="top" />
             </>
         );
     }

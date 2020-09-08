@@ -214,18 +214,18 @@ class Walkthrough extends Component {
 
                         <Button
                             full
-                            style={{ marginTop: 20 }}
+                            style={{ marginTop: 5 }}
                             loading={this.state.loading}
                             onPress={() => this.onSearch()}
                         >
                             {lang.search}
                         </Button>
-                        <Text style={BaseStyle.textInput1}>
+                        <Text style={BaseStyle.textInput}>
                             {this.state.status}
                         </Text>
                         <Button
                             full
-                            style={{ marginTop: 20 }}
+                            style={{ marginTop: 5 }}
                             loading={this.state.loading}
                             onPress={() => navigation.navigate("SignIn")}
                         >
