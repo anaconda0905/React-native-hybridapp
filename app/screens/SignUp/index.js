@@ -12,8 +12,6 @@ import {
     Icon,
     Text,
     Button,
-    ProfileDetail,
-    ProfilePerformance
 } from "@components";
 import * as Utils from "@utils";
 import { LangData } from "@data";
@@ -48,7 +46,7 @@ class SignUp extends Component {
     }
 
     onSignUp() {
-
+        const { lang } = this.state;
         const { navigation } = this.props;
         let { first_name, last_name, mobile_number, snapchat, email, password, success, reminders } = this.state;
 
@@ -66,8 +64,9 @@ class SignUp extends Component {
                 }
             });
         } else if (Utils.formatPhoneNumber(mobile_number) == null) {
-            console.log("here");
+            Alert.alert(lang.register_failed, lang.input_mobile_correclty);
         } else {
+            this.setState({mobile_number:Utils.formatPhoneNumber(mobile_number)});
             this.setState(
                 {
                     loading: true
@@ -77,7 +76,7 @@ class SignUp extends Component {
                         auth()
                             .createUserWithEmailAndPassword(email, password)
                             .then(() => {
-                                console.log('User account created & signed in!');
+                                // console.log('User account created & signed in!');
                                 const uid = auth().currentUser.uid;
 
                                 database()
@@ -95,10 +94,11 @@ class SignUp extends Component {
                                     .then(() => console.log('Data set to user table.'));
 
                                 showMessage({
-                                    message: 'User account created & signed in!',
+                                    message: lang.user_created_signin,
                                     type: 'success',
                                     icon: 'auto',
                                 });
+                                this.props.actions.authentication(true, uid, response => { });
                                 setTimeout(() => {
                                     navigation.navigate("Home");
                                 }, 2000);
@@ -109,28 +109,26 @@ class SignUp extends Component {
                                 let alertMsg = '';
                                 switch (error.code) {
                                     case 'auth/email-already-in-use':
-                                        alertMsg =
-                                            'That email address is already in use. You may log in to that account or create a new account with a different email address';
+                                        alertMsg = lang.email_already_used;
                                         break;
                                     case 'auth/invalid-email':
-                                        alertMsg = 'The email address is not valid.';
+                                        alertMsg = lang.email_isinvalid;
                                         break;
                                     case 'auth/operation-not-allowed':
-                                        alertMsg =
-                                            'The operation is not allowed. Please contact administrator.';
+                                        alertMsg = lang.operation_not_allowed;
                                         break;
                                     case 'auth/weak-password':
-                                        alertMsg = 'The password is not strong enough.';
+                                        alertMsg = lang.password_not_strong;
                                         break;
                                     default:
-                                        alertMsg = 'Error occurred while sign up, code:' + error.code;
+                                        alertMsg = lang.error_signup + error.code;
                                         break;
                                 }
-                                Alert.alert('Registration failed', alertMsg);
+                                Alert.alert(lang.register_failed, alertMsg);
                             });
                     }
                     else {
-                        Alert.alert('Registration failed', 'Email or mobile number validation error occurred!');
+                        Alert.alert(lang.register_failed, lang.email_phone_error);
                     }
                     setTimeout(() => {
                         this.setState({
@@ -216,7 +214,7 @@ class SignUp extends Component {
                             <View style={styles.containPhone}>
                                 <Text style={BaseStyle.label}>{lang.areacode}</Text>
                                 <TextInput
-                                    style={[BaseStyle.textInputPhone, { marginTop: 10 , }]}
+                                    style={[BaseStyle.textInputPhone, { marginTop: 10, }]}
                                     onChangeText={text => this.setState({ mobile_number: text })}
                                     autoCorrect={false}
                                     placeholder={lang.mobileNumber}

@@ -9,6 +9,7 @@ import {
 import { BaseStyle, BaseColor } from "@config";
 import { Header, SafeAreaView, Icon, Text } from "@components";
 import styles from "./styles";
+import { LangData } from "@data";
 // Load sample language data list
 import { LanguageData } from "@data";
 import { connect } from "react-redux";
@@ -21,15 +22,28 @@ class ChangeLanguage extends Component {
 
         // Temp data define
         this.state = {
+            lang: LangData.en,
             country: "",
             language: LanguageData,
             loading: false
         };
     }
 
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
+    }
+
     componentDidMount() {
         this.setState({ country: this.props.auth.user.lang });
-        
         this.setState({
             language: this.state.language.map(item => {
                 if (item.language == this.props.auth.user.lang) {
@@ -45,6 +59,17 @@ class ChangeLanguage extends Component {
                 }
             })
         });
+        if (this.props.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
+        this.props.auth.user.lang
     }
 
     /**
@@ -75,14 +100,14 @@ class ChangeLanguage extends Component {
 
     render() {
         const { navigation } = this.props;
-        let { language } = this.state;
+        let { language, lang } = this.state;
         return (
             <SafeAreaView
                 style={BaseStyle.safeAreaView}
                 forceInset={{ top: "always" }}
             >
                 <Header
-                    title="Change Language"
+                    title={lang.change_lang}
                     renderLeft={() => {
                         return (
                             <Icon
@@ -103,7 +128,7 @@ class ChangeLanguage extends Component {
                         } else {
                             return (
                                 <Text headline primaryColor>
-                                    Save
+                                    {lang.save}
                                 </Text>
                             );
                         }

@@ -9,6 +9,7 @@ const LangData =
             email: "Email",
             snapchat: "Snapchat",
             changeLang: "Eng/Arabic",
+            
             signup: "Sign Up",
             firstName: "First Name",
             lasttName: "Last Name",
@@ -23,6 +24,20 @@ const LangData =
             select_type: "Please select search type.",
             no_reuslt: "No result!",
             search_result: "Search result successfully retrieved.",
+            user_created_signin: "User account created & signed in!",
+            email_already_used: "That email address is already in use. You may log in to that account or create a new account with a different email address.",
+            email_isinvalid : "The email address is not valid.",
+            operation_not_allowed: "The operation is not allowed. Please contact administrator.",
+            password_not_strong: "The password is not strong enough.",
+            error_signup: "Error occurred while sign up, code:",
+            register_failed: "Registration failed",
+            email_phone_error: "Email or mobile number validation error occurred!",
+
+            change_lang: "Change Language",
+            save: "Save",
+
+            login: "LogIn",
+            message_signin_success: "Signed in successfully!",
         },
         arabic:{
             sigin: "تسجيل الدخول",
@@ -47,6 +62,20 @@ const LangData =
             select_type: "الرجاء تحديد نوع البحث",
             no_reuslt: "لا نتيجة",
             search_result: "تم استرداد نتيجة البحث بنجاح",
+            user_created_signin: "تم إنشاء حساب المستخدم وتسجيل الدخول",
+            email_already_used: "عنوان البريد الالكتروني ذاك تم استخدامه مسبقا. يمكنك تسجيل الدخول إلى هذا الحساب أو إنشاء حساب جديد بعنوان بريد إلكتروني مختلف.",
+            email_isinvalid : "عنوان البريد الإلكتروني غير صالح.",
+            operation_not_allowed: "العملية غير مسموح بها. يرجى الاتصال بالمسؤول.",
+            password_not_strong: "كلمة السر ليست قوية بما فيه الكفاية.",
+            error_signup: "حدث خطأ أثناء التسجيل ، الكود:",
+            register_failed: "فشل في التسجيل",
+            email_phone_error: "حدث خطأ في التحقق من صحة البريد الإلكتروني أو رقم الهاتف المحمول!",
+
+            change_lang: "تغيير اللغة",
+            save: "حفظ",
+
+            login: "تسجيل الدخول",
+            message_signin_success: "تم تسجيل الدخول بنجاح!",
         }
     };
 

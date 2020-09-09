@@ -9,6 +9,7 @@ import styles from "./styles";
 import { TextInput } from 'react-native-paper';
 import Swiper from "react-native-swiper";
 import * as Utils from "@utils";
+import { LangData } from "@data";
 import database from '@react-native-firebase/database';
 import auth from '@react-native-firebase/auth';
 import FlashMessage, { showMessage } from 'react-native-flash-message';
@@ -18,6 +19,7 @@ class SignIn extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            lang: LangData.en,
             id: "",
             password: "",
             loading: false,
@@ -31,9 +33,36 @@ class SignIn extends Component {
         };
     }
 
+    componentDidMount() {
+        if (this.props.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
+        this.props.auth.user.lang
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
+    }
+
     onLogin() {
 
-        const { id, password, success } = this.state;
+        const { id, password, success, lang } = this.state;
         const { navigation } = this.props;
         if (id == "" || password == "") {
             this.setState({
@@ -50,14 +79,14 @@ class SignIn extends Component {
                 },
                 () => {
                     // TODO conda
-                    console.log("firebase auth implementation");
+                    // console.log("firebase auth implementation");
                     auth()
                         .signInWithEmailAndPassword(id, password)
                         .then(() => {
                             const uid = auth().currentUser.uid;
-                            console.log('Signed in successfully!');
+                            // console.log('Signed in successfully!');
                             showMessage({
-                                message: 'Signed in successfully!',
+                                message: lang.message_signin_success,
                                 type: 'success',
                                 icon: 'auto',
                             });
@@ -67,9 +96,9 @@ class SignIn extends Component {
                             }, 1000);
                         })
                         .catch(error => {
-                            console.log("error");
+                            // console.log("error");
                             showMessage({
-                                message: 'Please input email and password correctly!',
+                                message: lang.input_correctly,
                                 type: 'danger',
                                 icon: 'auto',
                             });
@@ -87,6 +116,7 @@ class SignIn extends Component {
 
     render() {
         const { navigation } = this.props;
+        const { lang } = this.state;
         let base64Logo = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAA..';
         return (
             <>
@@ -95,7 +125,7 @@ class SignIn extends Component {
                     forceInset={{ top: "always" }}
                 >
                     <Header
-                        title="LogIn"
+                        title={lang.login}
                         renderLeft={() => {
                             return (
                                 <Icon
@@ -134,7 +164,7 @@ class SignIn extends Component {
                                             <View style={styles.slide} key={item.key}>
                                                 <Image source={item.image} style={styles.img} />
                                                 <Text body1 style={styles.textSlide}>
-                                                    Relationship status
+                                                    {lang.title}
                                                 </Text>
                                             </View>
                                         );
@@ -147,17 +177,17 @@ class SignIn extends Component {
                                 style={BaseStyle.textInput_walk}
                                 onChangeText={text => this.setState({ id: text })}
                                 autoCorrect={false}
-                                placeholder="Email"
+                                placeholder={lang.email}
                                 placeholderTextColor={BaseColor.grayColor}
                                 value={this.state.country}
                                 selectionColor={BaseColor.primaryColor}
                             />
                             <TextInput
-                                style={[BaseStyle.textInput_walk, {marginTop:10}]}
+                                style={[BaseStyle.textInput_walk, { marginTop: 10 }]}
                                 onChangeText={text => this.setState({ password: text })}
                                 secureTextEntry={true}
                                 autoCorrect={false}
-                                placeholder="Password"
+                                placeholder={lang.password}
                                 placeholderTextColor={BaseColor.grayColor}
                                 value={this.state.country}
                                 selectionColor={BaseColor.primaryColor}
@@ -170,7 +200,7 @@ class SignIn extends Component {
                                     this.onLogin();
                                 }}
                             >
-                                LogIn
+                                {lang.login}
                             </Button>
                         </View>
                     </ScrollView>
@@ -182,7 +212,9 @@ class SignIn extends Component {
 }
 
 const mapStateToProps = state => {
-    return {};
+    return {
+        auth: state.auth,
+    };
 };
 
 const mapDispatchToProps = dispatch => {
