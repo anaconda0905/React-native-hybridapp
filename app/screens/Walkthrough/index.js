@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { AuthActions } from "@actions";
-import { View, TouchableOpacity, ScrollView, LogBox, I18nManager, Alert, ToastAndroid } from "react-native";
 import { bindActionCreators } from "redux";
+import { View, TouchableOpacity, ScrollView, LogBox, I18nManager, Alert, ToastAndroid } from "react-native";
 import { SafeAreaView, Text, Button, Image, Icon } from "@components";
 import styles from "./styles";
 import Swiper from "react-native-swiper";
@@ -12,7 +12,7 @@ import { LangData } from "@data";
 import { Dropdown } from 'react-native-material-dropdown';
 import { TextInput } from 'react-native-paper';
 import database from '@react-native-firebase/database';
-
+import RNRestart from 'react-native-restart';
 
 class Walkthrough extends Component {
     constructor(props) {
@@ -20,7 +20,7 @@ class Walkthrough extends Component {
         this.state = {
             loading: false,
             scrollEnabled: true,
-            cca2: 'US',
+            lang: LangData.en,
             input_text: '',
             status: '',
             search_index: '',
@@ -32,9 +32,9 @@ class Walkthrough extends Component {
 
     onSearch() {
 
-        let { search_index, input_text, status } = this.state;
+        let { search_index, input_text, status, lang } = this.state;
         if (input_text == '') {
-            Alert.alert('Search failed', 'Please input correctly.');
+            Alert.alert(lang.searchfailed, lang.input_correctly);
         }
         else {
             switch (search_index) {
@@ -51,16 +51,16 @@ class Walkthrough extends Component {
                                     Object.keys(teams).forEach((key) => {
                                         this.setState({ status: teams[key].status });
                                     });
-                                    ToastAndroid.show("Search result successfully retrieved!", ToastAndroid.LONG);
+                                    ToastAndroid.show(lang.search_result, ToastAndroid.LONG);
                                 }
                                 else {
-                                    ToastAndroid.show("No result!", ToastAndroid.LONG);
+                                    ToastAndroid.show(lang.no_result, ToastAndroid.LONG);
                                 }
                             });
 
                     }
                     else {
-                        Alert.alert('Search failed', 'Please input mobile number correctly.');
+                        Alert.alert(lang.searchfailed, lang.input_mobile_correclty);
                     }
                     break;
                 case 1:
@@ -77,16 +77,16 @@ class Walkthrough extends Component {
                                         this.setState({ status: teams[key].status });
                                     });
 
-                                    ToastAndroid.show("Search result successfully retrieved!", ToastAndroid.LONG);
+                                    ToastAndroid.show(lang.search_result, ToastAndroid.LONG);
                                 }
                                 else {
-                                    ToastAndroid.show("No result!", ToastAndroid.LONG);
+                                    ToastAndroid.show(lang.no_result, ToastAndroid.LONG);
                                 }
                             });
 
                     }
                     else {
-                        Alert.alert('Search failed', 'Please input email correctly.');
+                        Alert.alert(lang.searchfailed, lang.input_email_correclty);
                     }
                     break;
                 case 2:
@@ -101,46 +101,79 @@ class Walkthrough extends Component {
                                 Object.keys(teams).forEach((key) => {
                                     this.setState({ status: teams[key].status });
                                 });
-                                ToastAndroid.show("Search result successfully retrieved!", ToastAndroid.LONG);
+                                ToastAndroid.show(lang.search_result, ToastAndroid.LONG);
                             }
                             else {
-                                ToastAndroid.show("No result!", ToastAndroid.LONG);
+                                ToastAndroid.show(lang.no_result, ToastAndroid.LONG);
                             }
                         });
                     break;
                 default:
-                    Alert.alert('Search failed', 'Please select search type!');
+                    Alert.alert(lang.searchfailed, lang.select_type);
                     break;
             }
 
         }
     }
 
-    componentDidMount(){
-        console.log(this.props.auth);
+    componentDidMount() {
+        if (this.props.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
+        this.props.auth.user.lang
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+            I18nManager.forceRTL(true);
+
+            // Alert.alert(
+            //     'Reload this page',
+            //     'Please reload this page to change the UI direction! ' +
+            //     'All components in this app will be affected. ' +
+            //     'Check them out to see what they look like in RTL layout.'
+            // );
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+            I18nManager.forceRTL(false);
+
+            // Alert.alert(
+            //     'Reload this page',
+            //     'Please reload this page to change the UI direction! ' +
+            //     'All components in this app will be affected. ' +
+            //     'Check them out to see what they look like in LTR layout.'
+            // );
+        }
+        RNRestart.Restart();
+
     }
 
     render() {
 
-        let { lang } = {};
-        if (this.props.auth.user.lang == "Arabic") {
-            lang = LangData.arabic;
-            I18nManager.forceRTL(true);
-        }
-        else {
-            lang = LangData.en;
-            I18nManager.forceRTL(false);
-        }
-
+        let { lang } = this.state;
         const { navigation } = this.props;
 
         let data = [{
-            value: 'Mobile number',
+            value: lang.mobileNumber,
         }, {
-            value: 'Email',
+            value: lang.email,
         }, {
-            value: 'Snapchat',
+            value: lang.snapchat,
         }];
+
 
         return (
             <SafeAreaView
@@ -161,7 +194,7 @@ class Walkthrough extends Component {
                             navigation.navigate("ChangeLanguage");
                         }}>
                             <Text body1 primaryColor>
-                                Eng/Arabic
+                                {lang.changeLang}
                             </Text>
                         </TouchableOpacity>
 
@@ -184,7 +217,7 @@ class Walkthrough extends Component {
                                     <View style={styles.slide} key={item.key}>
                                         <Image source={item.image} style={styles.img} />
                                         <Text body1 style={styles.textSlide}>
-                                            Relationship status
+                                            {lang.title}
                                         </Text>
                                     </View>
                                 );
@@ -208,6 +241,7 @@ class Walkthrough extends Component {
                             onChangeText={text => this.setState({ input_text: text })}
                             autoCorrect={false}
                             placeholder=""
+                            direction='rtl'
                             placeholderTextColor={BaseColor.grayColor}
                             value={this.state.input_text}
                             selectionColor={BaseColor.primaryColor}

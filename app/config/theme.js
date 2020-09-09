@@ -57,14 +57,16 @@ export const BaseStyle = StyleSheet.create({
     textInputPhone: {
         height: 46,
         marginTop: 5,
-        backgroundColor: BaseColor.fieldColor,
+        backgroundColor: BaseColor.whiteColor,
         borderRadius: 5,
         width: "85%",
         justifyContent: "center"
     },
     label: {
+        marginTop: 10,
         fontSize: 16,
         width: "15%",
+        textAlign:"left"
     },
     
     textInput_walk: {

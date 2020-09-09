@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import {
     View,
     FlatList,
@@ -6,15 +6,14 @@ import {
     TouchableOpacity,
     I18nManager
 } from "react-native";
-import {BaseStyle, BaseColor} from "@config";
-import {Header, SafeAreaView, Icon, Text} from "@components";
+import { BaseStyle, BaseColor } from "@config";
+import { Header, SafeAreaView, Icon, Text } from "@components";
 import styles from "./styles";
 // Load sample language data list
-import {LanguageData} from "@data";
-import {connect} from "react-redux";
-import {AuthActions} from "@actions";
-import {bindActionCreators} from "redux";
-import RNRestart from 'react-native-restart';
+import { LanguageData } from "@data";
+import { connect } from "react-redux";
+import { AuthActions } from "@actions";
+import { bindActionCreators } from "redux";
 
 class ChangeLanguage extends Component {
     constructor(props) {
@@ -28,7 +27,9 @@ class ChangeLanguage extends Component {
         };
     }
 
-    componentDidMount(){
+    componentDidMount() {
+        this.setState({ country: this.props.auth.user.lang });
+        
         this.setState({
             language: this.state.language.map(item => {
                 if (item.language == this.props.auth.user.lang) {
@@ -56,7 +57,7 @@ class ChangeLanguage extends Component {
 
         this.setState({
             language: this.state.language.map(item => {
-                this.setState({country: select.language});
+                this.setState({ country: select.language });
                 if (item.language == select.language) {
                     return {
                         ...item,
@@ -73,12 +74,12 @@ class ChangeLanguage extends Component {
     }
 
     render() {
-        const {navigation} = this.props;
-        let {language} = this.state;
+        const { navigation } = this.props;
+        let { language } = this.state;
         return (
             <SafeAreaView
                 style={BaseStyle.safeAreaView}
-                forceInset={{top: "always"}}
+                forceInset={{ top: "always" }}
             >
                 <Header
                     title="Change Language"
@@ -111,29 +112,17 @@ class ChangeLanguage extends Component {
                         navigation.navigate("Walkthrough");
                     }}
                     onPressRight={() => {
-                        this.setState(
-                            {
-                                loading: true
-                            },
-                            () => {
-                                setTimeout(() => {
-                                    this.setState({
-                                        loading: false
-                                    });
-                                    this.props.actions.changelanguage(this.state.country, response => {});
-                                    navigation.navigate("Walkthrough");
-                                    // RNRestart.Restart();
-                                }, 100);
-                            }
-                        );
+                        console.log(this.state.country);
+                        this.props.actions.changelanguage(this.state.country, response => { });
+                        navigation.navigate("Walkthrough");
                     }}
                 />
                 <View style={styles.contain}>
-                    <View style={{width: "100%", height: "100%"}}>
+                    <View style={{ width: "100%", height: "100%" }}>
                         <FlatList
                             data={language}
                             keyExtractor={(item, index) => item.id}
-                            renderItem={({item}) => (
+                            renderItem={({ item }) => (
                                 <TouchableOpacity
                                     style={styles.item}
                                     onPress={() => this.onChange(item)}
@@ -168,7 +157,7 @@ class ChangeLanguage extends Component {
 }
 const mapStateToProps = state => {
     return {
-        auth:state.auth,
+        auth: state.auth,
     };
 };
 

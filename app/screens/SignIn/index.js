@@ -153,7 +153,7 @@ class SignIn extends Component {
                                 selectionColor={BaseColor.primaryColor}
                             />
                             <TextInput
-                                style={BaseStyle.textInput_walk}
+                                style={[BaseStyle.textInput_walk, {marginTop:10}]}
                                 onChangeText={text => this.setState({ password: text })}
                                 secureTextEntry={true}
                                 autoCorrect={false}

@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { AuthActions } from "@actions";
+import { bindActionCreators } from "redux";
 import { View, ScrollView, Alert, Switch } from "react-native";
 import { TextInput } from 'react-native-paper';
 import { BaseStyle, BaseColor } from "@config";
@@ -13,14 +16,16 @@ import {
     ProfilePerformance
 } from "@components";
 import * as Utils from "@utils";
+import { LangData } from "@data";
 import auth from "@react-native-firebase/auth";
 import database from "@react-native-firebase/database";
 import FlashMessage, { showMessage } from 'react-native-flash-message';
 
-export default class SignUp extends Component {
+class SignUp extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            lang: LangData.en,
             reminders: false,
             first_name: "",
             last_name: "",
@@ -60,7 +65,7 @@ export default class SignUp extends Component {
                     reminders: reminders != false ? true : false
                 }
             });
-        } else if(Utils.formatPhoneNumber(mobile_number) == null){
+        } else if (Utils.formatPhoneNumber(mobile_number) == null) {
             console.log("here");
         } else {
             this.setState(
@@ -137,6 +142,19 @@ export default class SignUp extends Component {
         }
     }
 
+    componentDidMount() {
+        if (this.props.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
+    }
+
     /**
      * @description Call when reminder option switch on/off
      */
@@ -146,6 +164,7 @@ export default class SignUp extends Component {
 
     render() {
         const { navigation } = this.props;
+        const { lang } = this.state;
         let { loading, first_name, last_name, mobile_number, snapchat, email, password, success } = this.state;
         return (
             <>
@@ -154,7 +173,7 @@ export default class SignUp extends Component {
                     forceInset={{ top: "always" }}
                 >
                     <Header
-                        title="Sign Up"
+                        title={lang.signup}
                         renderLeft={() => {
                             return (
                                 <Icon
@@ -176,29 +195,31 @@ export default class SignUp extends Component {
                                 style={[BaseStyle.textInput_walk, { marginTop: 25 }]}
                                 onChangeText={text => this.setState({ first_name: text })}
                                 autoCorrect={false}
-                                placeholder="First Name"
+                                label={lang.firstName}
                                 placeholderTextColor={
                                     success.first_name ? BaseColor.grayColor : BaseColor.primaryColor
                                 }
                                 value={first_name}
+                                mode='outlined'
                             />
                             <TextInput
                                 style={[BaseStyle.textInput_walk, { marginTop: 10 }]}
                                 onChangeText={text => this.setState({ last_name: text })}
                                 autoCorrect={false}
-                                placeholder="Last Name"
+                                label={lang.lasttName}
                                 placeholderTextColor={
                                     success.last_name ? BaseColor.grayColor : BaseColor.primaryColor
                                 }
                                 value={last_name}
+                                mode='outlined'
                             />
                             <View style={styles.containPhone}>
-                                <Text style={BaseStyle.label}>+966</Text>
+                                <Text style={BaseStyle.label}>{lang.areacode}</Text>
                                 <TextInput
-                                    style={[BaseStyle.textInputPhone, { marginTop: 10 }]}
+                                    style={[BaseStyle.textInputPhone, { marginTop: 10 , }]}
                                     onChangeText={text => this.setState({ mobile_number: text })}
                                     autoCorrect={false}
-                                    placeholder="Mobile Number"
+                                    placeholder={lang.mobileNumber}
                                     keyboardType="phone-pad"
                                     placeholderTextColor={
                                         success.mobile_number ? BaseColor.grayColor : BaseColor.primaryColor
@@ -210,7 +231,8 @@ export default class SignUp extends Component {
                                 style={[BaseStyle.textInput_walk, { marginTop: 10 }]}
                                 onChangeText={text => this.setState({ snapchat: text })}
                                 autoCorrect={false}
-                                placeholder="snapchat"
+                                label={lang.snapchat}
+                                mode='outlined'
                                 placeholderTextColor={
                                     success.snapchat ? BaseColor.grayColor : BaseColor.primaryColor
                                 }
@@ -220,7 +242,8 @@ export default class SignUp extends Component {
                                 style={[BaseStyle.textInput_walk, { marginTop: 10 }]}
                                 onChangeText={text => this.setState({ email: text })}
                                 autoCorrect={false}
-                                placeholder="Email"
+                                label={lang.email}
+                                mode='outlined'
                                 keyboardType="email-address"
                                 placeholderTextColor={
                                     success.email ? BaseColor.grayColor : BaseColor.primaryColor
@@ -231,7 +254,8 @@ export default class SignUp extends Component {
                                 style={[BaseStyle.textInput_walk, { marginTop: 10 }]}
                                 onChangeText={text => this.setState({ password: text })}
                                 autoCorrect={false}
-                                placeholder="password"
+                                label={lang.password}
+                                mode='outlined'
                                 placeholderTextColor={
                                     success.password ? BaseColor.grayColor : BaseColor.primaryColor
                                 }
@@ -244,7 +268,7 @@ export default class SignUp extends Component {
                                     onValueChange={this.toggleSwitch}
                                     value={this.state.reminders}
                                 />
-                                <Text style={{ color: BaseColor.grayColor }}>I agree to the Terms and Conditions</Text>
+                                <Text style={{ color: BaseColor.grayColor }}>{lang.terms}</Text>
                             </View>
                             <View style={{ width: "100%" }}>
                                 <Button
@@ -253,7 +277,7 @@ export default class SignUp extends Component {
                                     loading={loading}
                                     onPress={() => this.onSignUp()}
                                 >
-                                    Save & Login
+                                    {lang.saveandlogin}
                                 </Button>
                             </View>
                         </View>
@@ -264,3 +288,17 @@ export default class SignUp extends Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        auth: state.auth
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        actions: bindActionCreators(AuthActions, dispatch)
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
