@@ -9,6 +9,7 @@ import { Dropdown } from 'react-native-material-dropdown';
 import { TextInput } from 'react-native-paper';
 import messaging from "@react-native-firebase/messaging";
 import SendSMS from 'react-native-sms';
+import { LangData } from "@data";
 import { FirebaseServices, NotificationServices } from '../../services'
 import FlashMessage, { showMessage } from 'react-native-flash-message';
 import styles from "./styles";
@@ -18,13 +19,10 @@ class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            lang: LangData.en,
             phoneNum1: "",
             phoneNum2: "",
             loading: false,
-            success: {
-                phoneNum1: true,
-                phoneNum2: true
-            },
             userToken: [],
         };
     }
@@ -32,6 +30,7 @@ class Home extends Component {
     componentDidMount() {
         // console.log(Utils.formatPhoneNumber("2345678900"));
         // console.log(Utils.phoneRegEx.test(2345678900));
+        this.initNotification();
         const { navigation } = this.props;
         if (this.props.auth.login.success == true) {
             messaging()
@@ -40,7 +39,31 @@ class Home extends Component {
                     this.setState({ userToken: [token] });
                     FirebaseServices.updateProfileTokenByUid(this.props.auth.login.uid, token);
                 });
-            this.initNotification();
+            
+        }
+        if (this.props.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
+        this.props.auth.user.lang
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
         }
     }
 
@@ -50,29 +73,54 @@ class Home extends Component {
             console.log('A new FCM message arrived!', remoteMessage);
             NotificationServices.showNotification(remoteMessage.data.title, remoteMessage.data.msg);
         });
-
     }
 
     onSend() {
-        const { userToken } = this.state;
-        const msg = "Could I have a relationship with you?";
-        const body = {
-            registration_ids: userToken,
-            notification: {
-                title: 'Relationship Status',
-                body: msg,
-                icon: 'notification-icon',
-            },
-            data: {
-                type: 'chat',
-                msg: msg,
-                title: 'Relationship Status',
-            },
-        };
-        FirebaseServices.sendNotification(body);
+        const { phoneNum1, phoneNum2, userToken } = this.state;
+        const title = "Could I have a relationship with you?";
+        
+        if (phoneNum1 == "" || phoneNum2 == ""){
+            showMessage({
+                message: "Please inputy correctly",
+                type: "danger",
+                icon: 'auto',
+            });
+        }
+        else if(!Utils.phoneRegEx.test(phoneNum2)){
+            showMessage({
+                message: "Please input mobile number correctly",
+                type: "danger",
+                icon: 'auto',
+            });
+            
+        }
+        else{
+            const phonenum = Utils.formatPhoneNumber(phoneNum2);
+            FirebaseServices.getTokenByPhone(phonenum, (token) => {
+                if(token){
+                    console.log(token);
+                    const body = {
+                        registration_ids: token,
+                        notification: {
+                            title: title,
+                            body: 'Verification code is 123456.',
+                            icon: 'notification_icon',
+                        },
+                        data: {
+                            type: 'chat',
+                            msg: 'Verification code is 123456.',
+                            title: title,
+                        },
+                    };
+                    FirebaseServices.sendNotification(body);
+                }
+            });
+        }
     }
 
     onSend1() {
+        const { navigation } = this.props;
+        navigation.navigate("SaveCode");
         const { phoneNum2 } = this.state;
         let msg = "";
         let type = "";
@@ -109,15 +157,15 @@ class Home extends Component {
                 icon: 'auto',
             });
         }
-
     }
 
     render() {
         const { navigation } = this.props;
+        const { lang } = this.state;
         let data = [{
-            value: 'Married',
+            value: lang.married,
         }, {
-            value: 'In Relation',
+            value: lang.inrelation,
         }];
         return (
             <>
@@ -126,7 +174,7 @@ class Home extends Component {
                     forceInset={{ top: "always" }}
                 >
                     <Header
-                        title="Relationship Status"
+                        title={lang.title}
                         renderRight={() => {
                             return (
                                 <Icon name="bell" size={24} color={BaseColor.primaryColor} />
@@ -143,62 +191,35 @@ class Home extends Component {
 
                         <View style={styles.contain}>
                             <View style={styles.containPhone}>
-                                <Text style={BaseStyle.label}>+966</Text>
+                                <Text style={BaseStyle.label}>{lang.areacode}</Text>
                                 <TextInput
                                     style={[BaseStyle.textInputPhone, { marginTop: 5 }]}
                                     onChangeText={text => this.setState({ phoneNum1: text })}
-                                    onFocus={() => {
-                                        this.setState({
-                                            success: {
-                                                ...this.state.success,
-                                                phoneNum1: true
-                                            }
-                                        });
-                                    }}
                                     autoCorrect={false}
-                                    placeholder="Mobile Number"
-                                    placeholderTextColor={
-                                        this.state.success.phoneNum1
-                                            ? BaseColor.grayColor
-                                            : BaseColor.primaryColor
-                                    }
+                                    keyboardType="phone-pad"
                                     value={this.state.phoneNum1}
                                     selectionColor={BaseColor.primaryColor}
                                 />
                             </View>
                             <View style={{ width: "100%" }}>
                                 <Dropdown
-                                    label='I AM ...'
+                                    label={lang.iam}
                                     data={data}
                                 />
                             </View>
 
                             <View style={{ width: "20%" }}>
                                 <Text style={BaseStyle.textInput2}>
-                                    To
+                                    {lang.to}
                                 </Text>
                             </View>
                             <View style={styles.containPhone}>
-                                <Text style={BaseStyle.label}>+966</Text>
+                                <Text style={BaseStyle.label}>{lang.areacode}</Text>
                                 <TextInput
                                     style={[BaseStyle.textInputPhone, { marginTop: 5 }]}
                                     onChangeText={text => this.setState({ phoneNum2: text })}
-                                    onFocus={() => {
-                                        this.setState({
-                                            success: {
-                                                ...this.state.success,
-                                                phoneNum2: true
-                                            }
-                                        });
-                                    }}
                                     autoCorrect={false}
-                                    placeholder="Mobile Number"
-                                    // secureTextEntry={true}
-                                    placeholderTextColor={
-                                        this.state.success.phoneNum2
-                                            ? BaseColor.grayColor
-                                            : BaseColor.primaryColor
-                                    }
+                                    keyboardType="phone-pad"
                                     value={this.state.phoneNum2}
                                     selectionColor={BaseColor.primaryColor}
                                 />
@@ -208,23 +229,23 @@ class Home extends Component {
                                 <Button
                                     full
                                     loading={this.state.loading}
-                                    style={{ marginTop: 20, height: 46 }}
+                                    style={{ marginTop: 10, height: 46 }}
                                     onPress={() => {
                                         this.onSend();
                                     }}
                                 >
-                                    Have a relationship
+                                    {lang.havearelation}
                                 </Button>
 
                                 <Button
                                     full
-                                    style={{ marginTop: 20, height: 46 }}
+                                    style={{ marginTop: 10, height: 46 }}
                                     onPress={() => {
                                         this.onSend1();
                                     }}
                                 >
-                                    End a relationship
-                            </Button>
+                                    {lang.endarelation}
+                                </Button>
                             </View>
                         </View>
                     </ScrollView>

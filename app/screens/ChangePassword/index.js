@@ -1,10 +1,15 @@
 import React, { Component } from "react";
-import { View, ScrollView, TextInput } from "react-native";
+import { View, ScrollView } from "react-native";
 import { BaseStyle, BaseColor } from "@config";
+import { TextInput } from 'react-native-paper';
 import { Header, SafeAreaView, Icon, Text, Button } from "@components";
 import styles from "./styles";
+import { connect } from "react-redux";
+import { AuthActions } from "@actions";
+import { bindActionCreators } from "redux";
+import { LangData } from "@data";
 
-export default class ChangePassword extends Component {
+class ChangePassword extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -94,3 +99,17 @@ export default class ChangePassword extends Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+      auth: state.auth,
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+      actions: bindActionCreators(AuthActions, dispatch)
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChangePassword);

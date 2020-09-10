@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { AuthActions } from "@actions";
 import { BaseStyle, BaseColor, BaseSetting } from "@config";
+import { LangData } from "@data";
 import {
     Header,
     SafeAreaView,
@@ -17,8 +18,36 @@ class Setting extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            lang: LangData.en,
             loading: false,
         };
+    }
+
+    componentDidMount() {
+        if (this.props.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
+        this.props.auth.user.lang
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
     }
 
     /**
@@ -33,19 +62,19 @@ class Setting extends Component {
         setTimeout(() => {
             navigation.navigate("Loading");
         }, 1000);
-        
+
     }
 
     render() {
         const { navigation } = this.props;
-        const { loading } = this.state;
+        const { loading, lang } = this.state;
         return (
             <SafeAreaView
                 style={BaseStyle.safeAreaView}
                 forceInset={{ top: "always" }}
             >
                 <Header
-                    title="Setting"
+                    title={lang.setting}
                     renderLeft={() => {
                         return (
                             <Icon
@@ -71,7 +100,7 @@ class Setting extends Component {
                                     navigation.navigate("ProfileEdit");
                                 }}
                             >
-                                <Text body1>Edit Profile</Text>
+                                <Text body1>{lang.editprofile}</Text>
                                 <Icon
                                     name="angle-right"
                                     size={18}
@@ -85,7 +114,7 @@ class Setting extends Component {
                                     navigation.navigate("ChangePassword");
                                 }}
                             >
-                                <Text body1>Change Password</Text>
+                                <Text body1>{lang.changepassword}</Text>
                                 <Icon
                                     name="angle-right"
                                     size={18}
@@ -95,7 +124,7 @@ class Setting extends Component {
                             </TouchableOpacity>
 
                             <View style={styles.profileItem}>
-                                <Text body1>App Version</Text>
+                                <Text body1>{lang.appversion}</Text>
                                 <Text body1 grayColor>
                                     {BaseSetting.appVersion}
                                 </Text>
@@ -105,7 +134,7 @@ class Setting extends Component {
                 </ScrollView>
                 <View style={{ padding: 20 }}>
                     <Button full loading={loading} onPress={() => this.onLogOut()}>
-                        Sign Out
+                        {lang.signout}
                     </Button>
                 </View>
             </SafeAreaView>
@@ -114,7 +143,9 @@ class Setting extends Component {
 }
 
 const mapStateToProps = state => {
-    return {};
+    return {
+        auth: state.auth
+    };
 };
 
 const mapDispatchToProps = dispatch => {

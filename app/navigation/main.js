@@ -11,6 +11,7 @@ import Home from "@screens/Home";
 import ProfileEdit from "@screens/ProfileEdit";
 import Setting from "@screens/Setting";
 import ChangePassword from "@screens/ChangePassword";
+import SaveCode from "@screens/SaveCode";
 
 // Transition for navigation by screen name
 const handleCustomTransition = ({scenes}) => {
@@ -93,6 +94,9 @@ const StackNavigator = createStackNavigator(
         },
         ProfileEdit: {
             screen: ProfileEdit
+        },
+        SaveCode: {
+            screen: SaveCode
         }
     },
     {

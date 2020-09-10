@@ -2,18 +2,21 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { AuthActions } from "@actions";
 import { bindActionCreators } from "redux";
-import { View, ScrollView, TextInput, Alert, ToastAndroid } from "react-native";
+import { View, ScrollView, Alert, ToastAndroid } from "react-native";
 import { BaseStyle, BaseColor, Images } from "@config";
 import { Image, Header, SafeAreaView, Icon, Text, Button } from "@components";
 import database from "@react-native-firebase/database";
+import { TextInput } from 'react-native-paper';
 import { FirebaseServices, NotificationServices } from '../../services'
 import * as Utils from "@utils";
+import { LangData } from "@data";
 import styles from "./styles";
 
 class ProfileEdit extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      lang: LangData.en,
       fName: "",
       lName: '',
       email: '',
@@ -33,15 +36,39 @@ class ProfileEdit extends Component {
         snapChat: info.snapChat
       });
     });
+    if (this.props.auth.user.lang == "Arabic") {
+      this.setState({
+        lang: LangData.arabic
+      });
+    }
+    else {
+      this.setState({
+        lang: LangData.en
+      });
+    }
+    this.props.auth.user.lang
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.auth.user.lang == "Arabic") {
+      this.setState({
+        lang: LangData.arabic
+      });
+    }
+    else {
+      this.setState({
+        lang: LangData.en
+      });
+    }
   }
 
   onConfirm() {
-    const { fName, lName, phoneNum, snapChat } = this.state;
+    const { fName, lName, phoneNum, snapChat, lang } = this.state;
     const { navigation } = this.props;
     const uuid = this.props.auth.login.uid;
 
-    if (uuid && Utils.phoneRegEx.test(phoneNum)){
-     
+    if (uuid && Utils.phoneRegEx.test(phoneNum)) {
+
       this.setState({
         loading: true
       });
@@ -57,25 +84,26 @@ class ProfileEdit extends Component {
           this.setState({
             loading: false
           })
-          ToastAndroid.show("Profile Updated successfully!", ToastAndroid.LONG);
+          ToastAndroid.show(lang.profile_update_success, ToastAndroid.LONG);
           navigation.navigate('Home');
         });
-    } else if(Utils.phoneRegEx.test(phoneNum) == false){
-      ToastAndroid.show("Mobile Number is invalid", ToastAndroid.LONG);
+    } else if (Utils.phoneRegEx.test(phoneNum) == false) {
+      ToastAndroid.show(lang.input_mobile_correclty, ToastAndroid.LONG);
     } else {
-      ToastAndroid.show("Please input correctly!", ToastAndroid.LONG);
+      ToastAndroid.show(lang.input_correctly, ToastAndroid.LONG);
     }
   }
 
   render() {
     const { navigation } = this.props;
+    const { lang } = this.state;
     return (
       <SafeAreaView
         style={BaseStyle.safeAreaView}
         forceInset={{ top: "always" }}
       >
         <Header
-          title="Edit Profile"
+          title={lang.editprofile}
           renderLeft={() => {
             return (
               <Icon
@@ -93,74 +121,64 @@ class ProfileEdit extends Component {
           <View style={styles.contain}>
             <View style={styles.contentTitle}>
               <Text headline semibold>
-                First Name
+                {lang.firstName}
               </Text>
             </View>
             <TextInput
               style={BaseStyle.textInput}
               onChangeText={text => this.setState({ fName: text })}
               autoCorrect={false}
-              placeholder="Input First Name"
-              placeholderTextColor={BaseColor.grayColor}
               value={this.state.fName}
               selectionColor={BaseColor.primaryColor}
             />
             <View style={styles.contentTitle}>
               <Text headline semibold>
-                Last Name
+                {lang.lasttName}
               </Text>
             </View>
             <TextInput
               style={BaseStyle.textInput}
               onChangeText={text => this.setState({ lName: text })}
               autoCorrect={false}
-              placeholder="Input Last Name"
-              placeholderTextColor={BaseColor.grayColor}
               value={this.state.lName}
               selectionColor={BaseColor.primaryColor}
             />
             <View style={styles.contentTitle}>
               <Text headline semibold>
-                Email
+                {lang.email}
               </Text>
             </View>
             <TextInput
               style={BaseStyle.textInput}
               onChangeText={text => this.setState({ email: text })}
               autoCorrect={false}
-              placeholder="Input email"
               editable={false}
-              placeholderTextColor={BaseColor.grayColor}
               value={this.state.email}
             />
             <View style={styles.contentTitle}>
               <Text headline semibold>
-                Mobile Number
+                {lang.mobileNumber}
               </Text>
             </View>
             <View style={styles.containPhone}>
-              <Text style={BaseStyle.label}>+966</Text>
+              <Text style={BaseStyle.label}>{lang.areacode}</Text>
               <TextInput
                 style={BaseStyle.textInputPhone}
                 onChangeText={text => this.setState({ phoneNum: text })}
                 autoCorrect={false}
-                placeholder="Input Mobile Number"
-                placeholderTextColor={BaseColor.grayColor}
                 value={this.state.phoneNum}
                 selectionColor={BaseColor.primaryColor}
               />
             </View>
             <View style={styles.contentTitle}>
               <Text headline semibold>
-                Snap Chat
+                {lang.snapchat}
               </Text>
             </View>
             <TextInput
               style={BaseStyle.textInput}
               onChangeText={text => this.setState({ snapChat: text })}
               autoCorrect={false}
-              placeholder="Input Snap Chat"
-              placeholderTextColor={BaseColor.grayColor}
               value={this.state.snapChat}
               selectionColor={BaseColor.primaryColor}
             />
@@ -174,7 +192,7 @@ class ProfileEdit extends Component {
               this.onConfirm();
             }}
           >
-            Confirm
+            {lang.confirm}
           </Button>
         </View>
       </SafeAreaView>

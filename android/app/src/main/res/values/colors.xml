@@ -2,4 +2,5 @@
 <resources>
     <color name="color_bg_launch_screen">#5DADE2</color>
     <color name="primary_dark">#000000</color>
+    <color name="colorAccent">#9495a5</color>
 </resources>

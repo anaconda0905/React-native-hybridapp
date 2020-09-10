@@ -25,7 +25,7 @@ function sendNotification(body) {
 
 async function getProfileByUid(uid, callback) {
     database()
-        .ref('/users/'+uid)
+        .ref('/users/' + uid)
         .once('value')
         .then(snapshot => {
             const userInfo = snapshot.val();
@@ -33,17 +33,37 @@ async function getProfileByUid(uid, callback) {
         });
 }
 
+async function getTokenByPhone(phone, callback) {
+    database()
+        .ref('users')
+        .orderByChild('mobileNumber')
+        .equalTo(phone)
+        .once('value', (snapshot) => {
+            const teams = snapshot.val();
+
+            if (teams) {
+                Object.keys(teams).forEach((key) => {
+                    callback([teams[key].token]);
+                });
+            }
+            else{
+                callback(null);
+            }
+        });
+}
+
 async function updateProfileTokenByUid(uid, token) {
     database()
-        .ref('/users/'+uid)
+        .ref('/users/' + uid)
         .update({
-            toekn: token,
+            token: token,
         })
-        .then(() => {});
+        .then(() => { });
 }
 
 export const FirebaseServices = {
     sendNotification,
     getProfileByUid,
-    updateProfileTokenByUid
+    updateProfileTokenByUid,
+    getTokenByPhone,
 };
