@@ -75,6 +75,20 @@ export const scrollEnabled = (contentWidth, contentHeight) => {
 export const emailRegex = /^\S+@\S+\.\S+$/;
 export const phoneRegEx = /^[(]?[0-9]{2,3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
 
+export function getCurrentDate() {
+  var d = new Date(),
+    minutes = d.getMinutes().toString().length == 1 ? '0' + d.getMinutes() : d.getMinutes(),
+    hours = d.getHours().toString().length == 1 ? '0' + d.getHours() : d.getHours(),
+    ampm = d.getHours() >= 12 ? 'pm' : 'am',
+    months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+    days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  return days[d.getDay()] + ' ' + months[d.getMonth()] + ' ' + d.getDate() + ' ' + d.getFullYear() + ' ' + hours + ':' + minutes + ampm;
+}
+
+export function getAvatarName(first, last) {
+  var name = first.charAt(0).toUpperCase() + last.charAt(0).toUpperCase();
+  return name;
+}
 export function formatPhoneNumber(phoneNumberString) {
   var cleaned = ('' + phoneNumberString).replace(/\D/g, '')
   var match = cleaned.match(/^(1|)?(\d{2,3})(\d{3})(\d{4})$/)

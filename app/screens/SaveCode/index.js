@@ -15,19 +15,24 @@ class SaveCode extends Component {
         super(props);
         this.state = {
             failed: false,
+            code: '',
             loading: false
         };
     }
 
+    onCodeChange = (code) => {
+        this.setState({ code: code });
+    };
+
     onFullFill(code) {
         const { failed } = this.state;
         if (!failed) {
-            this.onVerify();
+            this.onVerify(code);
         }
     }
 
-    onVerify = () =>{
-        console.log("verified");
+    onVerify = (code) => {
+        console.log("verified", code);
     }
 
     render() {

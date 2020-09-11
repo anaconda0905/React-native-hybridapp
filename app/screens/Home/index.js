@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { AuthActions } from "@actions";
 import { bindActionCreators } from "redux";
-import { View, ScrollView } from "react-native";
+import { View, ScrollView, ToastAndroid } from "react-native";
 import { BaseStyle, BaseColor, Images } from "@config";
 import { Header, DatePicker, SafeAreaView, Icon, Text, Button, Image } from "@components";
 import { Dropdown } from 'react-native-material-dropdown';
@@ -22,14 +22,29 @@ class Home extends Component {
             lang: LangData.en,
             phoneNum1: "",
             phoneNum2: "",
+            fName: "",
+            lName: '',
+            email: '',
+            phoneNum: '',
+            snapChat: '',
             loading: false,
             userToken: [],
         };
     }
 
     componentDidMount() {
-        // console.log(Utils.formatPhoneNumber("2345678900"));
-        // console.log(Utils.phoneRegEx.test(2345678900));
+        
+
+        FirebaseServices.getProfileByUid(this.props.auth.login.uid, (info) => {
+            this.setState({
+                fName: info.fName,
+                lName: info.lName,
+                email: info.email,
+                phoneNum: info.mobileNumber,
+                phoneNum1: info.mobileNumber,
+                snapChat: info.snapChat
+            });
+        });
         this.initNotification();
         const { navigation } = this.props;
         if (this.props.auth.login.success == true) {
@@ -39,7 +54,7 @@ class Home extends Component {
                     this.setState({ userToken: [token] });
                     FirebaseServices.updateProfileTokenByUid(this.props.auth.login.uid, token);
                 });
-            
+
         }
         if (this.props.auth.user.lang == "Arabic") {
             this.setState({
@@ -65,56 +80,71 @@ class Home extends Component {
                 lang: LangData.en
             });
         }
+
     }
 
     initNotification() {
         // foreground
         messaging().onMessage(async (remoteMessage) => {
             console.log('A new FCM message arrived!', remoteMessage);
+            this.props.actions.fromnotification(remoteMessage.data.type, response => {
+                console.log(response.success);
+             });
             NotificationServices.showNotification(remoteMessage.data.title, remoteMessage.data.msg);
         });
     }
 
     onSend() {
-        const { phoneNum1, phoneNum2, userToken } = this.state;
-        const title = "Could I have a relationship with you?";
-        
-        if (phoneNum1 == "" || phoneNum2 == ""){
-            showMessage({
-                message: "Please inputy correctly",
-                type: "danger",
-                icon: 'auto',
-            });
-        }
-        else if(!Utils.phoneRegEx.test(phoneNum2)){
-            showMessage({
-                message: "Please input mobile number correctly",
-                type: "danger",
-                icon: 'auto',
-            });
-            
-        }
-        else{
-            const phonenum = Utils.formatPhoneNumber(phoneNum2);
-            FirebaseServices.getTokenByPhone(phonenum, (token) => {
-                if(token){
-                    console.log(token);
-                    const body = {
-                        registration_ids: token,
-                        notification: {
-                            title: title,
-                            body: 'Verification code is 123456.',
-                            icon: 'notification_icon',
-                        },
-                        data: {
-                            type: 'chat',
-                            msg: 'Verification code is 123456.',
-                            title: title,
-                        },
-                    };
-                    FirebaseServices.sendNotification(body);
-                }
-            });
+        const { phoneNum1, phoneNum2, userToken, phoneNum, fName, lName } = this.state;
+        let title = "Could I have a relationship with you?";
+        let phoneNumTo = Utils.formatPhoneNumber(phoneNum2);
+        let code = Math.floor(100000 + Math.random() * 900000);
+        let name_title = fName + " " + lName;
+        let name = Utils.getAvatarName(fName, lName);
+        let date = Utils.getCurrentDate();
+        let description = "Verification code is " + code;
+        if (fName == "" || userToken == "") {
+            ToastAndroid.show("Just wait a min. Please try again.", ToastAndroid.LONG);
+        } else {
+            if (phoneNum1 == "" || phoneNum2 == "") {
+                showMessage({
+                    message: "Please inputy correctly",
+                    type: "danger",
+                    icon: 'auto',
+                });
+            }
+            else if (!Utils.phoneRegEx.test(phoneNum2)) {
+                showMessage({
+                    message: "Please input mobile number correctly",
+                    type: "danger",
+                    icon: 'auto',
+                });
+            }
+            else {
+                FirebaseServices.saveCodebyPhone(phoneNum, phoneNumTo, name_title, name, description, date, code);
+                FirebaseServices.getTokenByPhone(phoneNumTo, (token) => {
+                    if (token) {
+                        console.log(token);
+
+                        const body = {
+                            registration_ids: token,
+                            notification: {
+                                title: title,
+                                body: 'Verification code is ' + code,
+                                icon: 'notification_icon',
+                            },
+                            data: {
+                                type: phoneNum,
+                                code : code,
+                                msg: 'Verification code is ' + code,
+                                title: title,
+                            },
+                        };
+                        FirebaseServices.sendNotification(body);
+                    }
+                });
+
+            }
         }
     }
 

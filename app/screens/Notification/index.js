@@ -1,28 +1,81 @@
-import React, {Component} from "react";
-import {RefreshControl, FlatList} from "react-native";
-import {BaseStyle, BaseColor} from "@config";
-import {Header, SafeAreaView, Icon, ListThumbCircle} from "@components";
+import React, { Component } from "react";
+import { RefreshControl, FlatList } from "react-native";
+import { BaseStyle, BaseColor } from "@config";
+import { Header, SafeAreaView, Icon, ListThumbCircle } from "@components";
 import styles from "./styles";
+import { connect } from "react-redux";
+import { AuthActions } from "@actions";
+import { bindActionCreators } from "redux";
+import { LangData } from "@data";
+import { NotificationData } from "@data";
+import { FirebaseServices } from '../../services'
+import * as Utils from "@utils";
 
-// Load sample data
-import {NotificationData} from "@data";
-
-export default class Notification extends Component {
+class Notification extends Component {
     constructor(props) {
         super(props);
         this.state = {
             refreshing: false,
-            notification: NotificationData
+            fName: "",
+            lName: '',
+            email: '',
+            phoneNum: '',
+            snapChat: '',
+            notification: [],
         };
     }
 
+    componentDidMount() {
+        FirebaseServices.getProfileByUid(this.props.auth.login.uid, (info) => {
+            this.setState({
+                fName: info.fName,
+                lName: info.lName,
+                email: info.email,
+                phoneNum: info.mobileNumber,
+                snapChat: info.snapChat
+            });
+            let myphoneNum = Utils.formatPhoneNumber(info.mobileNumber);
+            
+            FirebaseServices.getNotificationByPhone(myphoneNum, (data) => {
+                this.setState({
+                    notification: data
+                });
+            });
+        });
+        if (this.props.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
+        this.props.auth.user.lang
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.auth.user.lang == "Arabic") {
+            this.setState({
+                lang: LangData.arabic
+            });
+        }
+        else {
+            this.setState({
+                lang: LangData.en
+            });
+        }
+    }
+
     render() {
-        const {navigation} = this.props;
-        let {notification} = this.state;
+        
+        const { navigation } = this.props;
+        let { notification } = this.state;
         return (
             <SafeAreaView
                 style={BaseStyle.safeAreaView}
-                forceInset={{top: "always"}}
+                forceInset={{ top: "always" }}
             >
                 <Header
                     title="Notification"
@@ -51,7 +104,7 @@ export default class Notification extends Component {
                     }
                     data={notification}
                     keyExtractor={(item, index) => item.id}
-                    renderItem={({item, index}) => (
+                    renderItem={({ item, index }) => (
                         <ListThumbCircle
                             txtLeftTitle={item.title}
                             txtUserName={item.name}
@@ -64,3 +117,17 @@ export default class Notification extends Component {
         );
     }
 }
+
+const mapStateToProps = state => {
+    return {
+        auth: state.auth,
+    };
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        actions: bindActionCreators(AuthActions, dispatch)
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Notification);

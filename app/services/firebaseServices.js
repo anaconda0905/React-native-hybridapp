@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { BackendConfig } from '@config';
 import database from '@react-native-firebase/database';
-import { useCallback } from 'react';
 
 const apiClient = axios.create({
     baseURL: BackendConfig.FCM_BASE_URL,
@@ -23,11 +22,31 @@ function sendNotification(body) {
     apiClient.post('https://fcm.googleapis.com/fcm/send', postData);
 }
 
+async function getNotificationByPhone(phone, callback) {
+
+    database()
+        .ref('notification')
+        .orderByChild('to')
+        .equalTo(phone)
+        .on('value', (snapshot) => {
+            const teams = snapshot.val();
+            var myItems = [];
+            if (teams) {
+                Object.keys(teams).forEach((key) => {
+                    myItems.push(teams[key]);
+                });
+                callback(myItems);
+            }
+            else {
+                callback(null);
+            }
+        });
+}
+
 async function getProfileByUid(uid, callback) {
     database()
         .ref('/users/' + uid)
-        .once('value')
-        .then(snapshot => {
+        .on('value', (snapshot) => {
             const userInfo = snapshot.val();
             callback(userInfo);
         });
@@ -38,7 +57,7 @@ async function getTokenByPhone(phone, callback) {
         .ref('users')
         .orderByChild('mobileNumber')
         .equalTo(phone)
-        .once('value', (snapshot) => {
+        .on('value', (snapshot) => {
             const teams = snapshot.val();
 
             if (teams) {
@@ -46,10 +65,25 @@ async function getTokenByPhone(phone, callback) {
                     callback([teams[key].token]);
                 });
             }
-            else{
+            else {
                 callback(null);
             }
         });
+}
+
+async function saveCodebyPhone(from, to, name_title, name, description, date, code) {
+    database()
+        .ref('/notification/' + from + '_' + to)
+        .set({
+            from: from,
+            to: to,
+            name: name,
+            title: name_title,
+            description: description,
+            date: date,
+            code: code,
+        })
+        .then(() => console.log('Data set to notification table.'));
 }
 
 async function updateProfileTokenByUid(uid, token) {
@@ -66,4 +100,6 @@ export const FirebaseServices = {
     getProfileByUid,
     updateProfileTokenByUid,
     getTokenByPhone,
+    saveCodebyPhone,
+    getNotificationByPhone,
 };
