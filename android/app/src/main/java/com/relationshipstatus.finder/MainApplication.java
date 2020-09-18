@@ -1,4 +1,4 @@
-package com.relationship;
+package com.relationshipstatus.finder;
 
 import android.app.Application;
 import android.content.Context;

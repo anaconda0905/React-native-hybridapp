@@ -25,7 +25,7 @@ android {
     }
     // dex file error
     defaultConfig {
-        applicationId "com.relationship"
+        applicationId "com.relationshipstatus.finder"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 9
@@ -100,6 +100,7 @@ dependencies {
     }
     // dex file error
     implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.google.firebase:firebase-analytics:17.5.0'
 }
 
 task copyDownloadableDepsToLibs(type: Copy) {

@@ -42,6 +42,59 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:285519403336:android:590020a91e42975b62bb7d",
+        "android_client_info": {
+          "package_name": "com.relationshipstatus.finder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "285519403336-a7nnavia7bdb0d15f3t9ijtlh2ncos7r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.relationshipstatus.finder",
+            "certificate_hash": "511061a7c79398ef1f6609930260326e495ec276"
+          }
+        },
+        {
+          "client_id": "285519403336-19fqfs0vkhtr4u07ld7vf40qq7siq2p0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.relationshipstatus.finder",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "285519403336-1lr4huk6csek1a3j8qmpddmc4gf26vp8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.relationshipstatus.finder",
+            "certificate_hash": "09bddf5f1b525060733bfa8dd6a1240cc160499d"
+          }
+        },
+        {
+          "client_id": "285519403336-kjqdp0g37r8jn0m16frcll38nbuh6ffh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmMU9XtUYD9NgNuqO71rlbGnCAM8PwJP8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "285519403336-kjqdp0g37r8jn0m16frcll38nbuh6ffh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"

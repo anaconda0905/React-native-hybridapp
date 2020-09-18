@@ -1,4 +1,4 @@
-package com.relationship;
+package com.relationshipstatus.finder;
 import org.devio.rn.splashscreen.SplashScreen;
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
