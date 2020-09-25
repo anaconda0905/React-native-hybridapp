@@ -34,7 +34,7 @@ class SignIn extends Component {
     }
 
     componentDidMount() {
-        
+
         if (this.props.auth.user.lang == "Arabic") {
             this.setState({
                 lang: LangData.arabic

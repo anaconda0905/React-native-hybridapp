@@ -1,5 +1,4 @@
-const LangData =
-{
+const LangData = {
     en: {
         sigin: "Sign In",
         search: "Result",
@@ -25,7 +24,8 @@ const LangData =
         no_reuslt: "No result!",
         search_result: "Search result successfully retrieved.",
         user_created_signin: "User account created & signed in!",
-        email_already_used: "That email address is already in use. You may log in to that account or create a new account with a different email address.",
+        email_already_used: "That email address is already in use. You may log in to that account or create" +
+                " a new account with a different email address.",
         email_isinvalid: "The email address is not valid.",
         operation_not_allowed: "The operation is not allowed. Please contact administrator.",
         password_not_strong: "The password is not strong enough.",
@@ -52,7 +52,7 @@ const LangData =
         appversion: "App Version",
         signout: "Sign Out",
         confirm: "Confirm",
-        profile_update_success: "Profile Updated successfully!",
+        profile_update_success: "Profile Updated successfully!"
     },
     arabic: {
         sigin: "تسجيل الدخول",
@@ -78,7 +78,8 @@ const LangData =
         no_reuslt: "لا نتيجة",
         search_result: "تم استرداد نتيجة البحث بنجاح",
         user_created_signin: "تم إنشاء حساب المستخدم وتسجيل الدخول",
-        email_already_used: "عنوان البريد الالكتروني ذاك تم استخدامه مسبقا. يمكنك تسجيل الدخول إلى هذا الحساب أو إنشاء حساب جديد بعنوان بريد إلكتروني مختلف.",
+        email_already_used: "عنوان البريد الالكتروني ذاك تم استخدامه مسبقا. يمكنك تسجيل الدخول إلى هذا الحس" +
+                "اب أو إنشاء حساب جديد بعنوان بريد إلكتروني مختلف.",
         email_isinvalid: "عنوان البريد الإلكتروني غير صالح.",
         operation_not_allowed: "العملية غير مسموح بها. يرجى الاتصال بالمسؤول.",
         password_not_strong: "كلمة السر ليست قوية بما فيه الكفاية.",
@@ -105,8 +106,10 @@ const LangData =
         appversion: "نسخة التطبيق",
         signout: "خروج",
         confirm: "تؤكد",
-        profile_update_success: "تم تحديث الملف الشخصي بنجاح!",
+        profile_update_success: "تم تحديث الملف الشخصي بنجاح!"
     }
 };
 
-export { LangData };
+export {
+    LangData
+};

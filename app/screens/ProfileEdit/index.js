@@ -56,6 +56,7 @@ class ProfileEdit extends Component {
       });
     }
     else {
+
       this.setState({
         lang: LangData.en
       });

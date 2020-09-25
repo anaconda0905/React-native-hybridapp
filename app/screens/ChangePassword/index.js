@@ -102,13 +102,13 @@ class ChangePassword extends Component {
 
 const mapStateToProps = state => {
   return {
-      auth: state.auth,
+    auth: state.auth,
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-      actions: bindActionCreators(AuthActions, dispatch)
+    actions: bindActionCreators(AuthActions, dispatch)
   };
 };
 

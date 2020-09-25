@@ -33,7 +33,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        
+
 
         FirebaseServices.getProfileByUid(this.props.auth.login.uid, (info) => {
             this.setState({
@@ -89,7 +89,7 @@ class Home extends Component {
             console.log('A new FCM message arrived!', remoteMessage);
             this.props.actions.fromnotification(remoteMessage.data.type, response => {
                 console.log(response.success);
-             });
+            });
             NotificationServices.showNotification(remoteMessage.data.title, remoteMessage.data.msg);
         });
     }
@@ -135,7 +135,7 @@ class Home extends Component {
                             },
                             data: {
                                 type: phoneNum,
-                                code : code,
+                                code: code,
                                 msg: 'Verification code is ' + code,
                                 title: title,
                             },

@@ -1,4 +1,4 @@
-import {createSwitchNavigator, createAppContainer} from "react-navigation";
+import { createSwitchNavigator, createAppContainer } from "react-navigation";
 import Main from "./main";
 import Loading from "@screens/Loading";
 import Walkthrough from "@screens/Walkthrough";

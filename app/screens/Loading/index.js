@@ -1,11 +1,11 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import {AuthActions} from "@actions";
-import {ActivityIndicator, View} from "react-native";
-import {bindActionCreators} from "redux";
-import {Images, BaseColor} from "@config";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { AuthActions } from "@actions";
+import { ActivityIndicator, View } from "react-native";
+import { bindActionCreators } from "redux";
+import { Images, BaseColor } from "@config";
 import SplashScreen from "react-native-splash-screen";
-import {Image, Text} from "@components";
+import { Image, Text } from "@components";
 import styles from "./styles";
 import messaging from '@react-native-firebase/messaging';
 
@@ -16,7 +16,7 @@ class Loading extends Component {
 
     onProcess() {
         SplashScreen.hide();
-        let {navigation, auth} = this.props;
+        let { navigation, auth } = this.props;
         let status = auth.login.success;
 
         switch (status) {
@@ -46,7 +46,7 @@ class Loading extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Image source={Images.logo} style={styles.logo} resizeMode="contain"/>
+                <Image source={Images.logo} style={styles.logo} resizeMode="contain" />
                 <View
                     style={{
                         position: "absolute",

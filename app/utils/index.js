@@ -170,6 +170,7 @@ export function fromTop(duration = 300) {
  * @param {number} [duration=300]
  * @returns
  */
+
 export function fromRight(duration = 300) {
   return {
     transitionSpec: {

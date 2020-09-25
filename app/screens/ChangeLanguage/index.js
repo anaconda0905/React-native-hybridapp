@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-    View,
-    FlatList,
-    ActivityIndicator,
-    TouchableOpacity,
-    I18nManager
-} from "react-native";
+import { View, FlatList, ActivityIndicator, TouchableOpacity, I18nManager } from "react-native";
 import { BaseStyle, BaseColor } from "@config";
 import { Header, SafeAreaView, Icon, Text } from "@components";
 import styles from "./styles";
@@ -19,7 +13,6 @@ import { bindActionCreators } from "redux";
 class ChangeLanguage extends Component {
     constructor(props) {
         super(props);
-
         // Temp data define
         this.state = {
             lang: LangData.en,
@@ -31,43 +24,36 @@ class ChangeLanguage extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.auth.user.lang == "Arabic") {
-            this.setState({
-                lang: LangData.arabic
-            });
-        }
-        else {
-            this.setState({
-                lang: LangData.en
-            });
+            this.setState({ lang: LangData.arabic });
+        } else {
+            this.setState({ lang: LangData.en });
         }
     }
 
     componentDidMount() {
         this.setState({ country: this.props.auth.user.lang });
         this.setState({
-            language: this.state.language.map(item => {
-                if (item.language == this.props.auth.user.lang) {
-                    return {
-                        ...item,
-                        checked: true
-                    };
-                } else {
-                    return {
-                        ...item,
-                        checked: false
-                    };
-                }
-            })
+            language: this
+                .state
+                .language
+                .map(item => {
+                    if (item.language == this.props.auth.user.lang) {
+                        return {
+                            ...item,
+                            checked: true
+                        };
+                    } else {
+                        return {
+                            ...item,
+                            checked: false
+                        };
+                    }
+                })
         });
         if (this.props.auth.user.lang == "Arabic") {
-            this.setState({
-                lang: LangData.arabic
-            });
-        }
-        else {
-            this.setState({
-                lang: LangData.en
-            });
+            this.setState({ lang: LangData.arabic });
+        } else {
+            this.setState({ lang: LangData.en });
         }
         this.props.auth.user.lang
     }
@@ -81,20 +67,23 @@ class ChangeLanguage extends Component {
     onChange(select) {
 
         this.setState({
-            language: this.state.language.map(item => {
-                this.setState({ country: select.language });
-                if (item.language == select.language) {
-                    return {
-                        ...item,
-                        checked: true
-                    };
-                } else {
-                    return {
-                        ...item,
-                        checked: false
-                    };
-                }
-            })
+            language: this
+                .state
+                .language
+                .map(item => {
+                    this.setState({ country: select.language });
+                    if (item.language == select.language) {
+                        return {
+                            ...item,
+                            checked: true
+                        };
+                    } else {
+                        return {
+                            ...item,
+                            checked: false
+                        };
+                    }
+                })
         });
     }
 
@@ -104,30 +93,20 @@ class ChangeLanguage extends Component {
         return (
             <SafeAreaView
                 style={BaseStyle.safeAreaView}
-                forceInset={{ top: "always" }}
-            >
+                forceInset={{
+                    top: "always"
+                }}>
                 <Header
                     title={lang.change_lang}
                     renderLeft={() => {
-                        return (
-                            <Icon
-                                name="arrow-left"
-                                size={20}
-                                color={BaseColor.primaryColor}
-                            />
-                        );
+                        return (<Icon name="arrow-left" size={20} color={BaseColor.primaryColor} />);
                     }}
                     renderRight={() => {
                         if (this.state.loading) {
-                            return (
-                                <ActivityIndicator
-                                    size="small"
-                                    color={BaseColor.primaryColor}
-                                />
-                            );
+                            return (<ActivityIndicator size="small" color={BaseColor.primaryColor} />);
                         } else {
                             return (
-                                <Text headline primaryColor>
+                                <Text headline="headline" primaryColor="primaryColor">
                                     {lang.save}
                                 </Text>
                             );
@@ -138,42 +117,35 @@ class ChangeLanguage extends Component {
                     }}
                     onPressRight={() => {
                         console.log(this.state.country);
-                        this.props.actions.changelanguage(this.state.country, response => { });
+                        this
+                            .props
+                            .actions
+                            .changelanguage(this.state.country, response => { });
                         navigation.navigate("Walkthrough");
-                    }}
-                />
+                    }} />
                 <View style={styles.contain}>
-                    <View style={{ width: "100%", height: "100%" }}>
+                    <View
+                        style={{
+                            width: "100%",
+                            height: "100%"
+                        }}>
                         <FlatList
                             data={language}
                             keyExtractor={(item, index) => item.id}
                             renderItem={({ item }) => (
-                                <TouchableOpacity
-                                    style={styles.item}
-                                    onPress={() => this.onChange(item)}
-                                >
+                                <TouchableOpacity style={styles.item} onPress={() => this.onChange(item)}>
                                     <Text
-                                        body1
-                                        style={
-                                            item.checked
-                                                ? {
-                                                    color: BaseColor.primaryColor
-                                                }
-                                                : {}
-                                        }
-                                    >
+                                        body1="body1"
+                                        style={item.checked
+                                            ? {
+                                                color: BaseColor.primaryColor
+                                            }
+                                            : {}}>
                                         {item.language}
                                     </Text>
-                                    {item.checked && (
-                                        <Icon
-                                            name="check"
-                                            size={14}
-                                            color={BaseColor.primaryColor}
-                                        />
-                                    )}
+                                    {item.checked && (<Icon name="check" size={14} color={BaseColor.primaryColor} />)}
                                 </TouchableOpacity>
-                            )}
-                        />
+                            )} />
                     </View>
                 </View>
             </SafeAreaView>
@@ -181,9 +153,7 @@ class ChangeLanguage extends Component {
     }
 }
 const mapStateToProps = state => {
-    return {
-        auth: state.auth,
-    };
+    return { auth: state.auth };
 };
 
 const mapDispatchToProps = dispatch => {
