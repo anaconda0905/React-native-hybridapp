@@ -18,7 +18,7 @@
     "@react-native-firebase/database": "^7.4.1",
     "@react-native-firebase/dynamic-links": "^7.5.2",
     "@react-native-firebase/messaging": "^7.6.1",
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "prop-types": "^15.7.2",
     "react": "16.9.0",
     "react-native": "0.61.5",
